@@ -10,5 +10,9 @@ def index():
 def kaius():
     return 'Moin Kaius'
 
+@app.route('/control')
+def control():
+	return render_template('control.html')
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
