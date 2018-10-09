@@ -1,9 +1,10 @@
-var app = angular.module('myApp', ['ngMaterial']);
+var app = angular.module('myApp', 'ngRepeat', ['ngMaterial']);
 
 /*$location is a service which returns information about the location of a web page*/
 // check if something happens
 app.controller('myCtrl', function($scope) {
-	$scope.rooms = 
+	$scope.rooms = [
 		{"key": "living", "name": "Wohnzimmer"}
-		{"key": "kitchen", "name": "Küche"};
+		{"key": "kitchen", "name": "Küche"}
+		];
 });
