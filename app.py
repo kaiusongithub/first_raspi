@@ -16,7 +16,7 @@ def control():
 
 @app.route('/control/room/<room>')
 def room(room):
-	return render_template(room.html, room=room)
+	return render_template('room.html', room=room)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
