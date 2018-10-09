@@ -21,10 +21,10 @@
 </div>
 
 <!-- ROOMS -->
-<a data-ng-repeat="x in rooms" href="control/room/kitchen">
+<a data-ng-repeat="x in rooms" href="control/room/{{x.key}}">
 	<div class="card select_room_wrapper">
 		<div class="select_room_icon_wrapper">
-			<div class="select_room_icon"></div>
+			<div class="select_room_icon" id="{{x.divid}}"></div>
 		</div>
 		<div class="select_room_devider_wrapper">
 			<div class="select_room_devider"></div>
