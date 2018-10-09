@@ -30,6 +30,10 @@ div {
 	background-color: transparent;
 }
 
+button {
+	float: left;
+}
+
 /*header*/
 #header {
 	position: absolute;
