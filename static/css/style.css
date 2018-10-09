@@ -71,6 +71,7 @@ button {
 	width: 300px;
 	height: auto;
 	margin-right: 12px;
+	margin-bottom: 12px;
 }
 
 .select_room_icon_wrapper {
@@ -89,6 +90,18 @@ button {
 
 #icon_living_room {
 	background-image: url("livingroom.png");
+}
+
+#icon_kitchen {
+	background-image: url("kitchen.png");
+}
+
+#icon_bed_room {
+	background-image: url("bedroom.png");
+}
+
+#icon_office {
+	background-image: url("office.png");
 }
 
 .select_room_devider_wrapper {
