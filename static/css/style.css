@@ -98,9 +98,13 @@ button {
 }
 
 .select_room_devider {
-	width: 100%;
+	width: 36px;
 	height: 100%;
 	background-color: #b00000;
+	margin-left: 50%;
+	-ms-transform: translateX(-18px); /* IE 9 */
+    -webkit-transform: translateX(-18px); /* Safari */
+    transform: translateX(-18px); /* Standard syntax */
 }
 
 .select_room_name_wrapper {
