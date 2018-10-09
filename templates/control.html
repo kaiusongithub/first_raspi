@@ -12,7 +12,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.min.js"></script>
-	
+
 	<!-- JAVASCRIPT FILE -->
 	<script type="text/javascript" src="{{url_for('static', filename='js/control.js')}}"></script>
 </head>
@@ -21,6 +21,7 @@
 <!--The ng-app directive defines the application, the ng-controller directive defines the controller.-->
 <!--The ng-init directive initializes AngularJS application variables.-->
 <div>
+<md-content>
   <!--The ng-model directive binds the value of HTML controls (input, select, textarea) to application data.-->
   <p>Seriennummer : <input type="text" data-ng-model="serialNumber"></p>
   <!--The ng-bind directive binds application data to the HTML view.-->
@@ -28,6 +29,7 @@
 
   <md-button class="md-raised">Button</md-button>
 
+</md-content>
 </div>
 
 <!-- Angular Material Library -->
