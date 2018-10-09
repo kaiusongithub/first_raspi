@@ -1,0 +1,33 @@
+/*DESKTOP & TABLET*/
+
+/*general styles*/
+html {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	position: relative;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #f8f8f8;
+	font-family: 'Roboto', sans-serif;	
+}
+
+div {
+	position: relative;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+/*SMARTPHONES
+
+/*general styles*/
