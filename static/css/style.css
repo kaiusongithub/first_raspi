@@ -27,6 +27,7 @@ div {
 	margin: 0;
 	padding: 0;
 	float: left;
+	background-color: transparent;
 }
 
 #header {
