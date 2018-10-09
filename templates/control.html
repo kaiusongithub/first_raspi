@@ -17,62 +17,17 @@
 	<p id="header_headline">Kai's Smart Home</p>
 </div>
 
-<!-- LIVING ROOM -->
-<a href="control/room/living">
+<!-- ROOMS -->
+<a ng-repeat="room in rooms" href="control/room/{{room.key}}">
 	<div class="card select_room_wrapper">
 		<div class="select_room_icon_wrapper">
-			<div class="select_room_icon" id="icon_living_room"></div>
+			<div class="select_room_icon" id="{{room.id}}"></div>
 		</div>
 		<div class="select_room_devider_wrapper">
 			<div class="select_room_devider"></div>
 		</div>
 		<div class="select_room_name_wrapper">
-			<p class="select_room_name">Wohnzimmer</p>
-		</div>
-	</div>
-</a>
-
-<!-- KITCHEN -->
-<a href="control/room/kitchen">
-	<div class="card select_room_wrapper">
-		<div class="select_room_icon_wrapper">
-			<div class="select_room_icon" id="icon_kitchen"></div>
-		</div>
-		<div class="select_room_devider_wrapper">
-			<div class="select_room_devider"></div>
-		</div>
-		<div class="select_room_name_wrapper">
-			<p class="select_room_name">K&uuml;che</p>
-		</div>
-	</div>
-</a>
-
-<!-- BEDROOM -->
-<a href="control/room/bed">
-	<div class="card select_room_wrapper">
-		<div class="select_room_icon_wrapper">
-			<div class="select_room_icon" id="icon_bed_room"></div>
-		</div>
-		<div class="select_room_devider_wrapper">
-			<div class="select_room_devider"></div>
-		</div>
-		<div class="select_room_name_wrapper">
-			<p class="select_room_name">Schlafzimmer</p>
-		</div>
-	</div>
-</a>
-
-<!-- OFFICE -->
-<a href="control/room/office">
-	<div class="card select_room_wrapper">
-		<div class="select_room_icon_wrapper">
-			<div class="select_room_icon" id="icon_office"></div>
-		</div>
-		<div class="select_room_devider_wrapper">
-			<div class="select_room_devider"></div>
-		</div>
-		<div class="select_room_name_wrapper">
-			<p class="select_room_name">B&uuml;ro</p>
+			<p class="select_room_name">{{room.name}}</p>
 		</div>
 	</div>
 </a>
