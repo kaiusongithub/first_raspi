@@ -6,18 +6,19 @@
 	<!-- Angular Material style sheet -->
   	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
 </head>
-<body data-ng-app="myApp" data-ng-controller="myCtrl" ng-cloak>
+<body data-ng-app="myApp" ng-cloak>
 
 <!--The ng-app directive defines the application, the ng-controller directive defines the controller.-->
 <!--The ng-init directive initializes AngularJS application variables.-->
-<div>
+<div data-ng-controller="myCtrl">
 <md-content>
   <!--The ng-model directive binds the value of HTML controls (input, select, textarea) to application data.-->
   <p>Seriennummer : <input type="text" data-ng-model="serialNumber"></p>
   <!--The ng-bind directive binds application data to the HTML view.-->
   <p>Seriennummer: {{serialNumber}}</p>
-
-  <md-button class="md-raised">Button</md-button>
+  <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+  	<md-button class="md-raised">Button</md-button>
+  </section>
 
 </md-content>
 </div>
