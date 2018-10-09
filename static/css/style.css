@@ -71,6 +71,10 @@ button {
 	color: #232323;
 }
 
+a {
+	color: #232323;
+}
+
 /*select room*/
 .select_room_wrapper {
 	width: 300px;
