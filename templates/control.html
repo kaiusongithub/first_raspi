@@ -14,7 +14,8 @@
 <!-- JAVASCRIPT FILE -->
 <script type="text/javascript" src="{{url_for('static', filename='js/control.js')}}"></script>
 </head>
-<body data-ng-app="myApp" data-ng-controller="myCtrl" ng-cloak>
+<body data-ng-app="myApp" ng-cloak>
+<div data-ng-controller="myCtrl" >
 
 <div id="header">
 	<md-button class="md-icon-button md-primary" aria-label="Settings">
@@ -37,6 +38,7 @@
 		</div>
 	</div>
 </a>
+</div>
 
 <!-- AngularsJS and Angular Material ressources at the end of the file for improved loading -->
 <!-- Angular Material requires Angular.js Libraries -->
