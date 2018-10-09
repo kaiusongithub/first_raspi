@@ -70,27 +70,54 @@ button {
 .select_room_wrapper {
 	width: 300px;
 	height: auto;
+	margin-right: 12px;
 }
 
 .select_room_icon_wrapper {
 	width: 100%;
 	height: 88px;
 	padding: 12px;
-	border: 1px solid #000000;
+}
+
+.select_room_icon {
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+#icon_living_room {
+	background-image: url("livingroom.png");
 }
 
 .select_room_devider_wrapper {
 	width: 100%;
 	height: 28px;
 	padding: 12px;
-	border: 1px solid #000000;
+}
+
+.select_room_devider {
+	width: 100%;
+	height: 100%;
+	background-color: #b00000;
 }
 
 .select_room_name_wrapper {
 	width: 100%;
 	height: 44px;
 	padding: 12px;
-	border: 1px solid #000000;
+}
+
+.select_room_name {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	line-height: 20px;
+	vertical-align: middle;
+	text-align: center;
+	font-weight: 300;
+	font-size: 14px;
 }
 
 /*SMARTPHONES*/
@@ -99,5 +126,6 @@ button {
 	/*select room*/
 	.select_room_wrapper {
 		width: 100%;
+		margin-right: 0;
 	}
 }
