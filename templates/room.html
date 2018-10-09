@@ -11,9 +11,11 @@
 <body data-ng-app="myApp" data-ng-controller="myCtrl" ng-cloak>
 
 <div id="header">
-	<md-button class="md-icon-button md-primary" aria-label="Settings">
-		<md-icon md-svg-icon="{{url_for('static', filename='css/menu.svg')}}"></md-icon>
-	</md-button>
+	<a href="/control">
+		<md-button class="md-icon-button md-primary" aria-label="Settings">
+			<md-icon md-svg-icon="{{url_for('static', filename='css/back.svg')}}"></md-icon>
+		</md-button>
+	</a>
 	<p id="header_headline">{{room}}</p>
 </div>
 
