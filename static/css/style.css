@@ -16,7 +16,8 @@ body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	background-color: #f8f8f8;
+	padding-top: 60px;
+	background-color: #eeeeee;
 	font-family: 'Roboto', sans-serif;	
 }
 
@@ -26,6 +27,16 @@ div {
 	margin: 0;
 	padding: 0;
 	float: left;
+}
+
+#header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 48px;
+	width: 100%;
+	padding: 12px;
+	background-color: #eeeeee;
 }
 
 /*SMARTPHONES
