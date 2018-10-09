@@ -4,7 +4,9 @@ var app = angular.module('myApp', ['ngMaterial']);
 // check if something happens
 app.controller('myCtrl', function($scope) {
 	$scope.rooms = [
-		{"key": "living", "name": "Wohnzimmer"},
-		{"key": "kitchen", "name": "Küche"}
+		{"key": "livingroom", "name": "Wohnzimmer"},
+		{"key": "kitchen", "name": "Küche"},
+		{"key": "bedroom", "name": "Schlafzimmer"},
+		{"key": "office", "name": "Büro"}
 		];
 });
