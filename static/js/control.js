@@ -116,6 +116,7 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
 				$scope.iconId = 'sunny_icon';
 			};
 	        console.log($scope.currentWeather);
+	        console.log($scope.currentCondition);
 	    });
     };
 
