@@ -56,7 +56,7 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
 		// "name":"Mountain View",
 		// "cod":200};
 
-	$scope.currentTemperature = $scope.currentWeather.main.temp;
+	$scope.currentTemperature = $scope.currentWeather['main']['temp'];
 });
 
  app.controller('roomCtrl', function($scope, $routeParams, $location) {
