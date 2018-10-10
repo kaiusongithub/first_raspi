@@ -1,7 +1,7 @@
 # DATABASE CONNECTION
 import MySQLdb
 db = MySQLdb.connect("localhost", "admin", "admin", "smarthome")
-curs=db.cursor()
+cur=db.cursor()
 
 
 from flask import Flask, render_template
