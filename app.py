@@ -14,8 +14,7 @@ def control():
 	for row in cur.fetchall() :
 		roomKey = str(row[0])
 		roomName = str(row[1])
-	return roomKey
-	return roomName
+	print cur.fetchall()
 	return render_template('control.html')
 
 @app.route('/getRooms', methods=['GET'])
