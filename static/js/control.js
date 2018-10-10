@@ -2,7 +2,7 @@
 var app = angular.module('myApp', ['ngMaterial', 'ngRoute']);
 
 // get the URL parameters based on the route
-app.config(function($routeProvider) {
+app.config(function($routeProvider, $locationProvider) {
   $routeProvider
   .when('rooms', {
     controller: 'myCtrl'
@@ -13,6 +13,7 @@ app.config(function($routeProvider) {
   .otherwise({
   	redirectTo: "rooms"
   });
+  $locationProvider.html5Mode(true);
 });
 
 app.controller('myCtrl', function($scope) {
