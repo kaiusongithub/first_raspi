@@ -5,10 +5,12 @@ var app = angular.module('myApp', ['ngMaterial', 'ngRoute']);
 app.config(function($routeProvider, $locationProvider) {
   $routeProvider
   .when('/rooms', {
-    controller: 'myCtrl'
+    controller: 'myCtrl',
+	template: ''
   })
   .when('/rooms/:roomkey', {
-    controller: 'roomCtrl',
+    controller: 'roomCtrl',,
+	template: ''
     // templateUrl : "main.htm"
   })
   $locationProvider.html5Mode(true);
