@@ -40,6 +40,7 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
     $http.get("http://api.openweathermap.org/data/2.5/weather?zip=49413,de&APPID=4a97ae0f4ff2538a214cf773a5351ff4")
     .then(function(response) {
         $scope.currentWeather = response.data;
+		$scope.currentTemperature = $scope.currentWeather['main']['temp'];
         console.log($scope.currentWeather)
     });
 
@@ -55,8 +56,6 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
 		// "id":0,
 		// "name":"Mountain View",
 		// "cod":200};
-
-	$scope.currentTemperature = $scope.currentWeather['main']['temp'];
 });
 
  app.controller('roomCtrl', function($scope, $routeParams, $location) {
