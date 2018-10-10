@@ -53,6 +53,18 @@ button {
 
 /*Material Design Changes*/
 
+md-list {
+	max-width: 800px;
+}
+
+md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
+	background-color: #b00000;
+}
+
+.md-button.md-default-theme.md-accent, .md-button.md-accent {
+	color: #b00000;
+}
+
 .md-button.md-default-theme.md-primary:not([disabled]) md-icon, .md-button.md-primary:not([disabled]) md-icon {
 	color: #b00000;
 }
