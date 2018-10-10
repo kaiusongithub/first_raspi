@@ -31,4 +31,6 @@ app.controller('myCtrl', function($scope) {
     console.log($routeParams);
     
     console.log($location.absUrl().split('/')[4]);
+    
+    console.log($location.absUrl().split('/').length);
  });
