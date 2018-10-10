@@ -5,7 +5,7 @@ var app = angular.module('myApp', ['ngMaterial', 'ngRoute']);
 app.config(function($routeProvider) {
   $routeProvider
   .when('/rooms/', {
-    templateUrl : "control.html",
+    templateUrl : "templates/control.html",
     controller: 'myCtrl'
   })
   .when('/rooms/:selectedroom/', {
