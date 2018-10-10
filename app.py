@@ -1,3 +1,9 @@
+# DATABASE CONNECTION
+import MySQLdb
+db = MySQLdb.connect("localhost", "root", "", "rooms")
+curs=db.cursor()
+
+
 from flask import Flask, render_template
 
 app = Flask(__name__)
