@@ -4,11 +4,12 @@ var app = angular.module('myApp', ['ngMaterial', 'ngRoute']);
 // get the URL parameters based on the route
 app.config(function($routeProvider, $locationProvider) {
   $routeProvider
-  .when('/rooms', {
+  .when('rooms', {
     controller: 'myCtrl'
   })
-  .when('/rooms/:roomkey', {
-    controller: 'roomCtrl'
+  .when('rooms/:roomkey', {
+    controller: 'roomCtrl',
+    templateUrl : "main.htm"
   })
   $locationProvider.html5Mode(true);
 });
