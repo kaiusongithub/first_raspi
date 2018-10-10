@@ -1,7 +1,3 @@
-##IMPORT CRUF OPERATIONS##
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-
 # DATABASE CONNECTION
 import MySQLdb
 db = MySQLdb.connect("localhost", "admin", "admin", "smarthome")
