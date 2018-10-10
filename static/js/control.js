@@ -21,5 +21,7 @@ app.controller('myCtrl', function($scope) {
 
  app.controller('roomCtrl', function($scope, $routeParams) {
     // $scope.selectedroom = $routeParams.room;
-    $scope.selectedroom = $routeParams;
+    $scope.$on('$routeChangeSuccess', function() {
+    	$scope.selectedroom = $routeParams;
+    });
  });
