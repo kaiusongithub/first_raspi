@@ -30,5 +30,5 @@ app.controller('myCtrl', function($scope) {
     $scope.selectedroom = "Ein Raum";
     console.log($routeParams);
     
-    console.log($location.absUrl().split('/'));
+    console.log($location.absUrl().split('/')[4]);
  });
