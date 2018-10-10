@@ -7,7 +7,7 @@ app.config(function($routeProvider) {
   .when('/rooms/', {
     controller: 'myCtrl'
   })
-  .when('/rooms/:selectedroom/', {
+  .when('/rooms/:roomkey/', {
     controller: 'roomCtrl'
   })
   .otherwise({
@@ -27,6 +27,6 @@ app.controller('myCtrl', function($scope) {
  app.controller('roomCtrl', function($scope, $rootScope, $routeParams, $location) {
     // $scope.selectedroom = $routeParams.room;
     $scope.selectedroom = "Ein Raum";
-    console.log($routeParams);
+    console.log($routeParams.roomkey);
     console.log($location.absUrl());
  });
