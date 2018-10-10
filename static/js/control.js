@@ -8,7 +8,7 @@ app.run(function($rootScope) {
 		{"key": "kitchen", "name": "Küche", "divid": "icon_kitchen"},
 		{"key": "bedroom", "name": "Schlafzimmer", "divid": "icon_bed_room"},
 		{"key": "office", "name": "Büro", "divid": "icon_office"}
-		];
+	];
 });
 
 // get the URL parameters based on the route
@@ -31,16 +31,27 @@ app.controller('myCtrl', function($scope) {
 });
 
  app.controller('roomCtrl', function($scope, $routeParams, $location) {
-    
- 	// $scope.urlArray = $location.absUrl().split('/');
- 	// $scope.intRoom = $scope.urlArray.length - 1;
- 	// $scope.selectedKey = $scope.urlArray[$scope.intRoom];
  	$scope.selectedRoom = "";
+ 	$scope.roomKey = "";
+
+ 	$scope.devices = [
+ 		{"key": "livingroomTV", "name": "Fernseher", "room": "livingroom"},
+ 		{"key": "livingroomMainLight", "name": "Hauptlampe", "room": "livingroom"},
+ 		{"key": "livingroomSmallLight", "name": "Kleines Licht", "room": "livingroom"},
+ 		{"key": "kitchenOven", "name": "Backofen", "room": "kitchen"},
+ 		{"key": "kitchenRadio", "name": "Radio", "room": "kitchen"},
+ 		{"key": "bedroomMainLight", "name": "Hauptlampe", "room": "bedroom"},
+ 		{"key": "bedroomSmallLight", "name": "Leselampe", "room": "bedroom"},
+ 		{"key": "bedroomTV", "name": "Fernseher", "room": "bedroom"},
+ 		{"key": "officeMain", "name": "Hauptschalter", "room": "office"}
+ 	];
 
     $scope.$on('$routeChangeSuccess', function() {
     	console.log($routeParams);
+    	$scope.roomKey = $routeParams.roomkey;
+
 	 	angular.forEach($scope.rooms, function (value, key) {
-			if(value.key == $routeParams.roomkey){
+			if(value.key == $scope.roomKey){
 				$scope.selectedRoom = value.name;
 			};
 		});

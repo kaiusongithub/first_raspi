@@ -23,24 +23,9 @@
 
 <!-- LIST OF ALL DEVICES IN THE ROOM -->
 <md-list>
-	<md-list-item>
+	<md-list-item data-ng-repeat="x in devices | filter:{ room: {{roomkey}} }">
 		<md-icon md-svg-icon="../static/css/alarm.svg"></md-icon>
-		<p>Lampe</p>
-		<md-switch class="md-secondary"></md-switch>
-	</md-list-item>
-	<md-list-item>
-		<md-icon md-svg-icon="../static/css/alarm.svg"></md-icon>
-		<p>TV</p>
-		<md-switch class="md-secondary"></md-switch>
-	</md-list-item>
-	<md-list-item>
-		<md-icon md-svg-icon="../static/css/alarm.svg"></md-icon>
-		<p>Heizung</p>
-		<md-switch class="md-secondary"></md-switch>
-	</md-list-item>
-	<md-list-item>
-		<md-icon md-svg-icon="../static/css/alarm.svg"></md-icon>
-		<p>Kerzen</p>
+		<p>{{x.name}}</p>
 		<md-switch class="md-secondary"></md-switch>
 	</md-list-item>
 </md-list>
