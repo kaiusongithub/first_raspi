@@ -2,13 +2,12 @@
 var app = angular.module('myApp', ['ngMaterial', 'ngRoute']);
 
 // get the URL parameters based on the route
-app.config(function($routeProvider, $locationProvider) {
+app.config(function($routeProvider) {
   $routeProvider
   .when('control/room/:selectedroom', {
     templateUrl : "room.html",
     controller: 'roomCtrl'
   });
-  $locationProvider.html5Mode(true);
 });
 
 app.controller('myCtrl', function($scope) {
@@ -24,5 +23,5 @@ app.controller('myCtrl', function($scope) {
     // $scope.selectedroom = $routeParams.room;
     $scope.selectedroom = "Ein Raum";
     console.log($routeParams);
-    console.log($location);
+    console.log($location.absURL());
  });
