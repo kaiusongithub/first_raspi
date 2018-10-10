@@ -4,7 +4,7 @@ var app = angular.module('myApp', ['ngMaterial', 'ngRoute']);
 // get the URL parameters based on the route
 app.config(function($routeProvider) {
   $routeProvider
-  .when('/control/room/:room', {
+  .when('/control/room/:selectedroom', {
     templateUrl : "room.html",
     controller: 'roomCtrl'
   });
@@ -21,9 +21,9 @@ app.controller('myCtrl', function($scope, $route, $routeParams) {
 	// getting the selected room from the URL
 	$scope.$route = $route;
     $scope.$routeParams = $routeParams;
-    $scope.room = "random";
+    $scope.selectedroom = "random";
 });
 
  app.controller('roomCtrl', function($scope, $routeParams) {
-    $scope.room = $routeParams.room;
+    $scope.selectedroom = $routeParams.room;
  });
