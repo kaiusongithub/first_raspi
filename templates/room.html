@@ -22,15 +22,18 @@
 	<p id="header_headline">{{selectedRoom}}</p>
 </div>
 
-<!-- LIST OF ALL DEVICES IN THE ROOM -->
-<md-list>
-	<md-list-item data-ng-repeat="x in devices | filter:{ room: roomKey }">
-		<md-icon md-svg-icon="../static/css/alarm.svg"></md-icon>
-		<p>{{x.name}}</p>
-		<md-switch class="md-secondary" ng-model="x.enabled"></md-switch>
-		<md-divider md-inset ng-if="!$last"></md-divider>
-	</md-list-item>
-</md-list>
+<div class="content_wrapper">
+	<!-- LIST OF ALL DEVICES IN THE ROOM -->
+	<md-list>
+		<md-list-item data-ng-repeat="x in devices | filter:{ room: roomKey }">
+			<md-icon md-svg-icon="../static/css/alarm.svg"></md-icon>
+			<p>{{x.name}}</p>
+			<md-switch class="md-secondary" ng-model="x.enabled"></md-switch>
+			<md-divider md-inset ng-if="!$last"></md-divider>
+		</md-list-item>
+	</md-list>
+</div>
+
 </div>
 
 <!-- AngularsJS and Angular Material ressources at the end of the file for improved loading -->
