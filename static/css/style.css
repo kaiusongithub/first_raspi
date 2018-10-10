@@ -40,6 +40,11 @@ button {
 	border-radius: 3px;
 }
 
+.content_wrapper {
+	width: 100%;
+	height: 100%;
+}
+
 /*Material Design Changes*/
 
 .md-button.md-default-theme.md-primary:not([disabled]) md-icon, .md-button.md-primary:not([disabled]) md-icon {
