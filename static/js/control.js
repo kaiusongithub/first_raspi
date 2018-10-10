@@ -9,7 +9,7 @@ app.config(function($routeProvider, $locationProvider) {
 	template: ''
   })
   .when('/rooms/:roomkey', {
-    controller: 'roomCtrl',,
+    controller: 'roomCtrl',
 	template: ''
     // templateUrl : "main.htm"
   })
