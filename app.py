@@ -2,11 +2,11 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('rooms')
+@app.route('/rooms')
 def control():
 	return render_template('control.html')
 
-@app.route('rooms/<selectedroom>')
+@app.route('/rooms/<selectedroom>')
 def room(selectedroom):
 	return render_template('room.html', selectedroom=room)
 
