@@ -8,9 +8,6 @@ app.config(function($routeProvider) {
     templateUrl : "room.html",
     controller: 'roomCtrl'
   });
-
-  // configure html5 to get links working on jsfiddle
-  $locationProvider.html5Mode(true);
 });
 
 app.controller('myCtrl', function($scope, $route, $routeParams) {
