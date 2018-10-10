@@ -38,7 +38,7 @@ app.controller('myCtrl', function($scope) {
  	$scope.selectedRoom = "";
 
  	angular.forEach($scope.rooms, function (value, key) {
-		if(value.key == selectedKey){
+		if(value.key == $scope.selectedKey){
 			$scope.selectedRoom = value.name;
 		};
 	});
