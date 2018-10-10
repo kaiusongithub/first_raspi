@@ -1,4 +1,3 @@
-{% raw %}
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -7,7 +6,7 @@
 	<!-- Angular Material style sheet -->
   	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
 	<!-- STYLESHEET -->
-  	<link rel="stylesheet" href="static/css/style.css">
+  	<link rel="stylesheet" href="/static/css/style.css">
   	<!-- <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}"> -->
 </head>
 <body data-ng-app="myApp" ng-cloak>
@@ -15,7 +14,7 @@
 
 <div id="header">
 	<md-button class="md-icon-button md-primary" aria-label="Settings">
-		<md-icon md-svg-icon="static/css/menu.svg"></md-icon>
+		<md-icon md-svg-icon="/static/css/menu.svg"></md-icon>
 	</md-button>
 	<p id="header_headline">Kai's Smart Home</p>
 </div>
@@ -48,9 +47,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
 
 <!-- JAVASCRIPT FILE -->
-<script type="text/javascript" src="static/js/control.js"></script>
+<script type="text/javascript" src="/static/js/control.js"></script>
 <!-- <script type="text/javascript" src="{{url_for('static', filename='js/control.js')}}"></script> -->
 
 </body>
 </html>
-{% endraw %}
