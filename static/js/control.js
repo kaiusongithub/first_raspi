@@ -23,9 +23,10 @@ app.controller('myCtrl', function($scope) {
 		];
 });
 
- app.controller('roomCtrl', function($scope, $rootScope, $routeParams, $location) {
+ app.controller('roomCtrl', function($scope, $rootScope, $routeParams, $location, $routeProvider) {
     // $scope.selectedroom = $routeParams.room;
     $scope.selectedroom = "Ein Raum";
     console.log($routeParams);
     console.log($location.absUrl());
+    console.log($routeProvider);
  });
