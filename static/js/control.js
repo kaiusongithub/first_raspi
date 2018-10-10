@@ -76,13 +76,12 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
     // update weather based on selected country
     $scope.userCity = '49413';
 
-    if($scope.userCity == '83201'){
-    	$scope.userCountry = "us";
-    } else {
-    	$scope.userCountry = "de";
-    };
-
     $scope.updateWeather = function() {
+    	    if($scope.userCity == '83201'){
+		    	$scope.userCountry = "us";
+		    } else {
+		    	$scope.userCountry = "de";
+		    };
     	$http.get("http://api.openweathermap.org/data/2.5/weather?zip=" + $scope.userCity + "," + $scope.userCountry + "&APPID=4a97ae0f4ff2538a214cf773a5351ff4&units=metric")
     	.then(function(response) {
 	        $scope.currentWeather = response.data;
