@@ -10,9 +10,6 @@ app.config(function($routeProvider, $locationProvider) {
   .when('/rooms/:roomkey/', {
     controller: 'roomCtrl'
   })
-  .otherwise({
-  	redirectTo: "rooms"
-  });
   $locationProvider.html5Mode(true);
 });
 
