@@ -33,7 +33,7 @@
 			Klickt auf einen Raum, um auf die jeweiligen Ger&auml;te zuzugreifen.<br>
 			Viel Spass!<br><br>
 		</p>
-		<md-select ng-model="userCity">
+		<md-select ng-model="userCity" ng-change="updateWeather()">
 			<md-option ng-value="49413" selected>Dinklage</md-option>
 			<md-option ng-value="49078">Osnabr&uuml;ck</md-option>
 			<md-option ng-value="72074">T&uuml;bingen</md-option>

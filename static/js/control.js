@@ -73,6 +73,46 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
         console.log($scope.currentWeather);
     });
 
+    // update weather based on selected country
+    $scope.userCity = 49413;
+    $scope.update = function() {
+    	$http.get("http://api.openweathermap.org/data/2.5/weather?zip=" + $scope.userCity + ",de&APPID=4a97ae0f4ff2538a214cf773a5351ff4&units=metric")
+    	.then(function(response) {
+	        $scope.currentWeather = response.data;
+			// $scope.currentTemperature = ($scope.currentWeather['main']['temp'] - 32) * (5 / 9);
+			// (296 °F − 32) × 5/9 = 146,667 °C
+			$scope.currentTemperature = $scope.currentWeather['main']['temp'];
+			$scope.currentCity = $scope.currentWeather['name'];
+			$scope.currentCondition = $scope.currentWeather['weather']['description'];
+			// 2xx > thunderstorm
+			// 3xx > drizzle
+			// 5xx > rain
+			// 6xx > snow
+			// 7xx > atmosphere
+			// 800 > clear
+			// 80x > clouds
+			// sunny
+			if($scope.currentCondition == 'clear sky'){
+				$scope.iconId = 'sunny_icon';
+			// cloudy
+			} else if($scope.currentCondition == 'few clouds' || $scope.currentCondition == 'broken clouds'){
+				$scope.iconId = 'cloudy_icon';
+			// cloud
+			} else if($scope.currentCondition == 'scattered clouds' || $scope.currentCondition == 'mist'){
+				$scope.iconId = 'cloud_icon';
+			// rainy
+			} else if($scope.currentCondition == 'shower rain' || $scope.currentCondition == 'rain' || $scope.currentCondition == 'thunderstorm'){
+				$scope.iconId = 'rain_icon';
+			// snowy
+			} else if($scope.currentCondition == 'snow'){
+				$scope.iconId = 'snow_icon';
+			} else {
+				$scope.iconId = 'sunny_icon';
+			};
+	        console.log($scope.currentWeather);
+	    });
+    };
+
   //   $scope.currentWeather = {
   //   	"coord":{"lon":-122.09,"lat":37.39},
 		// "sys":{"type":3,"id":168940,"message":0.0297,"country":"US","sunrise":1427723751,"sunset":1427768967},
