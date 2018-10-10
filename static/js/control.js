@@ -40,7 +40,8 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
     $http.get("http://api.openweathermap.org/data/2.5/weather?zip=49413,de&APPID=4a97ae0f4ff2538a214cf773a5351ff4")
     .then(function(response) {
         $scope.currentWeather = response.data;
-		$scope.currentTemperature = $scope.currentWeather['main']['temp'];
+		$scope.currentTemperature = ($scope.currentWeather['main']['temp'] - 32) * (5 / 9);
+		// (296 °F − 32) × 5/9 = 146,667 °C
         console.log($scope.currentWeather)
     });
 
