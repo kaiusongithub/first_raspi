@@ -1,3 +1,7 @@
+##IMPORT CRUF OPERATIONS##
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+
 # DATABASE CONNECTION
 import MySQLdb
 db = MySQLdb.connect("localhost", "admin", "admin", "smarthome")
@@ -11,6 +15,10 @@ app = Flask(__name__)
 @app.route('/rooms')
 def control():
 	return render_template('control.html')
+
+@app.route('/getRooms', methods=['GET'])
+def getRoomList():
+	return [{"room": "kitchen"}, {"room": "bedroom"}]
 
 @app.route('/rooms/<selectedroom>')
 def room(selectedroom):
