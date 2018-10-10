@@ -26,7 +26,7 @@ app.config(function($routeProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
 });
 
-app.controller('myCtrl', function($scope, $mdSidenav) {
+app.controller('myCtrl', function($scope, $mdSidenav, $http) {
 	$scope.toggleLeft = buildToggler('left');
 	console.log('SideNav');
 
