@@ -1,4 +1,5 @@
-var app = angular.module('myApp', ['ngMaterial'], ['ngRoute']);
+// var app = angular.module('myApp', ['ngMaterial'], ['ngRoute']);
+var app = angular.module('myApp', ['ngMaterial']);
 
 // get the URL parameters based on the route
 app.config(function($routeProvider, $locationProvider) {
