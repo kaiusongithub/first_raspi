@@ -29,11 +29,11 @@ app.config(function($routeProvider, $locationProvider) {
 app.controller('myCtrl', function($scope, $mdSidenav) {
 	$scope.toggleLeft = buildToggler('left');
 
-    function buildToggler(componentId) {
+	function buildToggler(componentId) {
       return function() {
         $mdSidenav(componentId).toggle();
       };
-    }
+    };
 });
 
  app.controller('roomCtrl', function($scope, $routeParams, $location) {
