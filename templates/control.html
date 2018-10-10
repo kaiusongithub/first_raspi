@@ -12,7 +12,7 @@
   	<!-- <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}"> -->
 </head>
 <body data-ng-app="myApp" ng-cloak>
-<div data-ng-controller="myCtrl" class="content_wrapper">
+<div data-ng-controller="myCtrl">
 
 <div id="header">
 	<md-button class="md-icon-button md-primary" aria-label="Settings">
@@ -20,7 +20,6 @@
 	</md-button>
 	<p id="header_headline">Kai's Smart Home</p>
 </div>
-
 <!-- SIDE NAVIGATION -->
 <md-sidenav class="md-sidenav-left" md-component-id="left" md-whiteframe="4">
 
@@ -39,20 +38,22 @@
 
 </md-sidenav>
 
-<!-- ROOMS -->
-<a data-ng-repeat="x in rooms" href="/rooms/{{x.key}}" target="_self">
-	<div class="card select_room_wrapper">
-		<div class="select_room_icon_wrapper">
-			<div class="select_room_icon" id="{{x.divid}}"></div>
+<div class="content_wrapper">
+	<!-- ROOMS -->
+	<a data-ng-repeat="x in rooms" href="/rooms/{{x.key}}" target="_self">
+		<div class="card select_room_wrapper">
+			<div class="select_room_icon_wrapper">
+				<div class="select_room_icon" id="{{x.divid}}"></div>
+			</div>
+			<div class="select_room_devider_wrapper">
+				<div class="select_room_devider"></div>
+			</div>
+			<div class="select_room_name_wrapper">
+				<p class="select_room_name">{{x.name}}</p>
+			</div>
 		</div>
-		<div class="select_room_devider_wrapper">
-			<div class="select_room_devider"></div>
-		</div>
-		<div class="select_room_name_wrapper">
-			<p class="select_room_name">{{x.name}}</p>
-		</div>
+	</a>
 	</div>
-</a>
 </div>
 
 <!-- AngularsJS and Angular Material ressources at the end of the file for improved loading -->
