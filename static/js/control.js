@@ -9,7 +9,7 @@ app.config(function($routeProvider, $locationProvider) {
   })
   .when('/rooms/:roomkey', {
     controller: 'roomCtrl',
-    templateUrl : "main.htm"
+    // templateUrl : "main.htm"
   })
   $locationProvider.html5Mode(true);
 });
@@ -23,12 +23,10 @@ app.controller('myCtrl', function($scope) {
 		];
 });
 
- app.controller('roomCtrl', function($scope, $rootScope, $routeParams, $location) {
+ app.controller('roomCtrl', function($scope, $routeParams, $location) {
     // $scope.selectedroom = $routeParams.room;
     $scope.selectedroom = "Ein Raum";
-    $scope.$on('$routeChangeSuccess', function (event, current, previous) {
-    	console.log($routeParams);
-    });
+    console.log($routeParams);
     
     console.log($location.absUrl());
  });
