@@ -19,7 +19,7 @@ app.controller('myCtrl', function($scope) {
 		];
 });
 
- app.controller('roomCtrl', function($scope, $routeParams) {
+ app.controller('roomCtrl', function($scope, $routeParams, $route) {
     // $scope.selectedroom = $routeParams.room;
     $scope.selectedroom = $routeParams;
     console.log('routeParams:'+JSON.stringify($route.current.params));
