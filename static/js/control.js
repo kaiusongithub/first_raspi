@@ -35,6 +35,13 @@ app.controller('myCtrl', function($scope, $mdSidenav) {
         $mdSidenav(componentId).toggle();
       };
     };
+
+    // get current weather data
+    $http.get("http://api.openweathermap.org/data/2.5/forecast?zip=49413,de&APPID=4a97ae0f4ff2538a214cf773a5351ff4")
+    .then(function(response) {
+        $scope.currentWeather = response.data;
+        console.log($scope.currentWeather)
+    });
 });
 
  app.controller('roomCtrl', function($scope, $routeParams, $location) {
