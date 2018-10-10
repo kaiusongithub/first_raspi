@@ -74,9 +74,9 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
     });
 
     // update weather based on selected country
-    $scope.userCity = 49413;
+    $scope.userCity = '49413';
 
-    if($scope.userCity == 83201){
+    if($scope.userCity == '83201'){
     	$scope.userCountry = "us";
     } else {
     	$scope.userCountry = "de";
