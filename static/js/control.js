@@ -26,11 +26,12 @@ app.controller('myCtrl', function($scope) {
 });
 
  app.controller('roomCtrl', function($scope, $routeParams, $location) {
-    // $scope.selectedroom = $routeParams.room;
-    $scope.selectedroom = "Ein Raum";
+    
+ 	$scope.urlArray = $location.absUrl().split('/');
+ 	$scope.intRoom = $scope.urlArray.length - 1;
+ 	$scope.selectedRoom = $scope.urlArray[$scope.intRoom];
+
     console.log($routeParams);
-    
     console.log($location.absUrl().split('/')[4]);
-    
     console.log($location.absUrl().split('/').length);
  });
