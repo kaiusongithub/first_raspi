@@ -2,7 +2,7 @@
 var app = angular.module('myApp', ['ngMaterial', 'ngRoute']);
 
 // get the URL parameters based on the route
-app.config(function($routeProvider, $locationProvider, $routeParams) {
+app.config(function($routeProvider, $locationProvider) {
   $routeProvider
   .when('/rooms', {
     controller: 'myCtrl'
