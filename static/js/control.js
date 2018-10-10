@@ -23,5 +23,5 @@ app.controller('myCtrl', function($scope) {
     // $scope.selectedroom = $routeParams.room;
     $scope.selectedroom = "Ein Raum";
     console.log($routeParams);
-    console.log($location.absURL());
+    console.log($location.absUrl());
  });
