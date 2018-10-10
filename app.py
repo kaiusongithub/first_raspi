@@ -12,9 +12,8 @@ app = Flask(__name__)
 def control():
 	cur.execute("SELECT roomKey,roomName FROM smarthome.rooms")
 	for row in cur.fetchall() :
-      	#data from rows
-        roomKey = str(row[0])
-        roomName = str(row[1])
+		roomKey = str(row[0])
+		roomName = str(row[1])
     return roomKey
     return roomName
 	return render_template('control.html')
