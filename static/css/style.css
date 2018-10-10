@@ -51,6 +51,10 @@ button {
 	padding: 12px;
 }
 
+.button_wrapper {
+	width: 100%;
+}
+
 /*Material Design Changes*/
 
 md-list {
