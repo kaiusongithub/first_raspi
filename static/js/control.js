@@ -37,10 +37,7 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
     };
 
     // get rooms
-    $http.get({
-    	method: 'GET',
-    	url: 'http://192.168.178.29:5000/getRooms'
-    }).then(function(response) {
+    $http.get('http://192.168.178.29:5000/getRooms').then(function(response) {
 
     });
 
