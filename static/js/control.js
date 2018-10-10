@@ -43,6 +43,7 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
 		// $scope.currentTemperature = ($scope.currentWeather['main']['temp'] - 32) * (5 / 9);
 		// (296 °F − 32) × 5/9 = 146,667 °C
 		$scope.currentTemperature = $scope.currentWeather['main']['temp'];
+		$scope.currentCity = $scope.currentWeather['name']
         console.log($scope.currentWeather)
     });
 
