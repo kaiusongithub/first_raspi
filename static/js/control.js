@@ -32,20 +32,17 @@ app.controller('myCtrl', function($scope) {
 
  app.controller('roomCtrl', function($scope, $routeParams, $location) {
     
- 	$scope.urlArray = $location.absUrl().split('/');
- 	$scope.intRoom = $scope.urlArray.length - 1;
- 	$scope.selectedKey = $scope.urlArray[$scope.intRoom];
+ 	// $scope.urlArray = $location.absUrl().split('/');
+ 	// $scope.intRoom = $scope.urlArray.length - 1;
+ 	// $scope.selectedKey = $scope.urlArray[$scope.intRoom];
  	$scope.selectedRoom = "";
-
- 	angular.forEach($scope.rooms, function (value, key) {
-		if(value.key == $scope.selectedKey){
-			$scope.selectedRoom = value.name;
-		};
-	});
 
     $scope.$on('$routeChangeSuccess', function() {
     	console.log($routeParams);
+	 	angular.forEach($scope.rooms, function (value, key) {
+			if(value.key == $routeParams.roomkey){
+				$scope.selectedRoom = value.name;
+			};
+		});
     });
-    console.log($location.absUrl().split('/')[4]);
-    console.log($location.absUrl().split('/').length);
  });
