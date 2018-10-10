@@ -4,10 +4,10 @@ var app = angular.module('myApp', ['ngMaterial', 'ngRoute']);
 // get the URL parameters based on the route
 app.config(function($routeProvider) {
   $routeProvider
-  .when('/rooms/', {
+  .when('rooms', {
     controller: 'myCtrl'
   })
-  .when('/rooms/:roomkey/', {
+  .when('rooms/:roomkey/', {
     controller: 'roomCtrl'
   })
   .otherwise({
