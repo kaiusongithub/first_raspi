@@ -25,5 +25,6 @@ app.controller('myCtrl', function($scope, $route, $routeParams) {
 });
 
  app.controller('roomCtrl', function($scope, $routeParams) {
-    $scope.selectedroom = $routeParams.room;
+    // $scope.selectedroom = $routeParams.room;
+    $scope.selectedroom = "Random";
  });
