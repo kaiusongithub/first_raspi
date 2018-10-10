@@ -28,6 +28,7 @@ app.config(function($routeProvider, $locationProvider) {
 
 app.controller('myCtrl', function($scope, $mdSidenav) {
 	$scope.toggleLeft = buildToggler('left');
+	console.log('SideNav');
 
 	function buildToggler(componentId) {
       return function() {
