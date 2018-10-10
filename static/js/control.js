@@ -43,8 +43,34 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
 		// $scope.currentTemperature = ($scope.currentWeather['main']['temp'] - 32) * (5 / 9);
 		// (296 °F − 32) × 5/9 = 146,667 °C
 		$scope.currentTemperature = $scope.currentWeather['main']['temp'];
-		$scope.currentCity = $scope.currentWeather['name']
-        console.log($scope.currentWeather)
+		$scope.currentCity = $scope.currentWeather['name'];
+		$scope.currentCondition = $scope.currentWeather['weather']['description'];
+		// 2xx > thunderstorm
+		// 3xx > drizzle
+		// 5xx > rain
+		// 6xx > snow
+		// 7xx > atmosphere
+		// 800 > clear
+		// 80x > clouds
+		// sunny
+		if($scope.currentCondition == 'clear sky'){
+			$scope.iconId = 'sunny_icon';
+		// cloudy
+		} else if($scope.currentCondition == 'few clouds' || $scope.currentCondition == 'broken clouds'){
+			$scope.iconId = 'cloudy_icon';
+		// cloud
+		} else if($scope.currentCondition == 'scattered clouds' || $scope.currentCondition == 'mist'){
+			$scope.iconId = 'cloud_icon';
+		// rainy
+		} else if($scope.currentCondition == 'shower rain' || $scope.currentCondition == 'rain' || $scope.currentCondition == 'thunderstorm'){
+			$scope.iconId = 'rain_icon';
+		// snowy
+		} else if($scope.currentCondition == 'snow'){
+			$scope.iconId = 'snow_icon';
+		} else {
+			$scope.iconId = 'sunny_icon';
+		};
+        console.log($scope.currentWeather);
     });
 
   //   $scope.currentWeather = {

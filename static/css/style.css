@@ -155,8 +155,24 @@ a:active {
 	background-size: contain;
 }
 
-#weather_icon {
+#sunny_icon {
+	background-image: url("sun.png");
+}
+
+#cloudy_icon {
 	background-image: url("cloudy.png");
+}
+
+#cloud_icon {
+	background-image: url("cloudy.png");
+}
+
+#rain_icon {
+	background-image: url("rainy.png");
+}
+
+#snow_icon {
+	background-image: url("snowy.png");
 }
 
 #icon_living_room {
