@@ -21,9 +21,9 @@ app.controller('myCtrl', function($scope, $route, $routeParams) {
 	// getting the selected room from the URL
 	$scope.$route = $route;
     $scope.$routeParams = $routeParams;
-    $rootScope.room = "random";
+    $scope.room = "random";
 });
 
  app.controller('roomCtrl', function($scope, $routeParams) {
-    $rootScope.room = $routeParams.room;
+    $scope.room = $routeParams.room;
  });
