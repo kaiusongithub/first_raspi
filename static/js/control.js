@@ -4,7 +4,11 @@ var app = angular.module('myApp', ['ngMaterial', 'ngRoute']);
 // get the URL parameters based on the route
 app.config(function($routeProvider) {
   $routeProvider
-  .when('control/room/:selectedroom', {
+  .when('rooms/', {
+    templateUrl : "control.html",
+    controller: 'myCtrl'
+  })
+  .when('rooms/:selectedroom/', {
     templateUrl : "room.html",
     controller: 'roomCtrl'
   });
