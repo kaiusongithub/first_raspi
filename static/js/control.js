@@ -35,15 +35,15 @@ app.controller('myCtrl', function($scope) {
  	$scope.roomKey = "";
 
  	$scope.devices = [
- 		{"key": "livingroomTV", "name": "Fernseher", "room": "livingroom"},
- 		{"key": "livingroomMainLight", "name": "Hauptlampe", "room": "livingroom"},
- 		{"key": "livingroomSmallLight", "name": "Kleines Licht", "room": "livingroom"},
- 		{"key": "kitchenOven", "name": "Backofen", "room": "kitchen"},
- 		{"key": "kitchenRadio", "name": "Radio", "room": "kitchen"},
- 		{"key": "bedroomMainLight", "name": "Hauptlampe", "room": "bedroom"},
- 		{"key": "bedroomSmallLight", "name": "Leselampe", "room": "bedroom"},
- 		{"key": "bedroomTV", "name": "Fernseher", "room": "bedroom"},
- 		{"key": "officeMain", "name": "Hauptschalter", "room": "office"}
+ 		{"key": "livingroomTV", "name": "Fernseher", "room": "livingroom", "enabled": true},
+ 		{"key": "livingroomMainLight", "name": "Hauptlampe", "room": "livingroom", "enabled": false},
+ 		{"key": "livingroomSmallLight", "name": "Kleines Licht", "room": "livingroom", "enabled": true},
+ 		{"key": "kitchenOven", "name": "Backofen", "room": "kitchen", "enabled": true},
+ 		{"key": "kitchenRadio", "name": "Radio", "room": "kitchen", "enabled": false},
+ 		{"key": "bedroomMainLight", "name": "Hauptlampe", "room": "bedroom", "enabled": true},
+ 		{"key": "bedroomSmallLight", "name": "Leselampe", "room": "bedroom", "enabled": true},
+ 		{"key": "bedroomTV", "name": "Fernseher", "room": "bedroom", "enabled": false},
+ 		{"key": "officeMain", "name": "Hauptschalter", "room": "office", "enabled": true}
  	];
 
     $scope.$on('$routeChangeSuccess', function() {
