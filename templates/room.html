@@ -23,7 +23,7 @@
 
 <!-- LIST OF ALL DEVICES IN THE ROOM -->
 <md-list>
-	<md-list-item data-ng-repeat="x in devices | filter:{ room: {{roomkey}} }">
+	<md-list-item data-ng-repeat="x in devices | filter:{ room: roomkey }">
 		<md-icon md-svg-icon="../static/css/alarm.svg"></md-icon>
 		<p>{{x.name}}</p>
 		<md-switch class="md-secondary"></md-switch>
