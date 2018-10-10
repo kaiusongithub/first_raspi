@@ -151,6 +151,10 @@ a:active {
 	background-size: contain;
 }
 
+#weather_icon {
+	background-image: url("cloudy.png");
+}
+
 #icon_living_room {
 	background-image: url("livingroom.png");
 }

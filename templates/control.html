@@ -41,6 +41,18 @@
 </md-sidenav>
 
 <div class="content_wrapper">
+	<!-- WEATHER -->
+	<div class="card select_room_wrapper">
+		<div class="select_room_icon_wrapper">
+			<div class="select_room_icon" id="weather_icon"></div>
+		</div>
+		<div class="select_room_devider_wrapper">
+			<div class="select_room_devider"></div>
+		</div>
+		<div class="select_room_name_wrapper">
+			<p class="select_room_name">13 ° C</p>
+		</div>
+	</div>
 	<!-- ROOMS -->
 	<a data-ng-repeat="x in rooms" href="/rooms/{{x.key}}" target="_self">
 		<div class="card select_room_wrapper">
