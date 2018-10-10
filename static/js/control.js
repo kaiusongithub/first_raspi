@@ -5,7 +5,7 @@ var app = angular.module('myApp', ['ngMaterial', 'ngRoute']);
 app.config(function($routeProvider) {
   $routeProvider
   .when('/control/room/:room', {
-    templateUrl: 'room.html',
+    templateUrl : "room.html",
     controller: 'roomCtrl'
   });
 
@@ -24,9 +24,9 @@ app.controller('myCtrl', function($scope, $route, $routeParams) {
 	// getting the selected room from the URL
 	$scope.$route = $route;
     $scope.$routeParams = $routeParams;
-    $scope.room = "random";
+    $rootScope.room = "random";
 });
 
  app.controller('roomCtrl', function($scope, $routeParams) {
-    $scope.room = $routeParams.room;
+    $rootScope.room = $routeParams.room;
  });
