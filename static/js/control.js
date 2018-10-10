@@ -1,8 +1,8 @@
 // var app = angular.module('myApp', ['ngMaterial'], ['ngRoute']);
-var app = angular.module('myApp', ['ngMaterial']);
+var app = angular.module('myApp', ['ngMaterial', 'ngRoute']);
 
 // get the URL parameters based on the route
-app.config(function($routeProvider, $locationProvider) {
+app.config(function($routeProvider) {
   $routeProvider
   .when('/control/room/:room', {
     templateUrl: 'room.html',
@@ -13,7 +13,7 @@ app.config(function($routeProvider, $locationProvider) {
   $locationProvider.html5Mode(true);
 });
 
-app.controller('myCtrl', function($scope, $route, $routeParams, $location) {
+app.controller('myCtrl', function($scope, $route, $routeParams) {
 	$scope.rooms = [
 		{"key": "livingroom", "name": "Wohnzimmer", "divid": "icon_living_room"},
 		{"key": "kitchen", "name": "Küche", "divid": "icon_kitchen"},
@@ -23,11 +23,10 @@ app.controller('myCtrl', function($scope, $route, $routeParams, $location) {
 
 	// getting the selected room from the URL
 	$scope.$route = $route;
-    $scope.$location = $location;
     $scope.$routeParams = $routeParams;
-    $scope.params = {};
+    $scope.room = "random";
 });
 
  app.controller('roomCtrl', function($scope, $routeParams) {
-     $scope.params = $routeParams;
+    $scope.room = $routeParams.room;
  });
