@@ -1,7 +1,7 @@
 var app = angular.module('myApp', ['ngMaterial'], ['ngRoute']);
 
 // get the URL parameters based on the route
-.config(function($routeProvider, $locationProvider) {
+app.config(function($routeProvider, $locationProvider) {
   $routeProvider
   .when('/control/room/:room', {
     templateUrl: 'room.html',
