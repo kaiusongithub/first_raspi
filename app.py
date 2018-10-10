@@ -1,6 +1,6 @@
 # DATABASE CONNECTION
 import MySQLdb
-db = MySQLdb.connect("localhost", "root", "", "rooms")
+db = MySQLdb.connect("localhost", "admin", "admin", "smarthome")
 curs=db.cursor()
 
 
