@@ -1,6 +1,16 @@
 // var app = angular.module('myApp', ['ngMaterial'], ['ngRoute']);
 var app = angular.module('myApp', ['ngMaterial', 'ngRoute']);
 
+// define global variables
+app.run(function($rootScope) {
+	$rootScope.rooms = [
+		{"key": "livingroom", "name": "Wohnzimmer", "divid": "icon_living_room"},
+		{"key": "kitchen", "name": "Küche", "divid": "icon_kitchen"},
+		{"key": "bedroom", "name": "Schlafzimmer", "divid": "icon_bed_room"},
+		{"key": "office", "name": "Büro", "divid": "icon_office"}
+		];
+});
+
 // get the URL parameters based on the route
 app.config(function($routeProvider, $locationProvider) {
   $routeProvider
@@ -17,19 +27,21 @@ app.config(function($routeProvider, $locationProvider) {
 });
 
 app.controller('myCtrl', function($scope) {
-	$scope.rooms = [
-		{"key": "livingroom", "name": "Wohnzimmer", "divid": "icon_living_room"},
-		{"key": "kitchen", "name": "Küche", "divid": "icon_kitchen"},
-		{"key": "bedroom", "name": "Schlafzimmer", "divid": "icon_bed_room"},
-		{"key": "office", "name": "Büro", "divid": "icon_office"}
-		];
+	
 });
 
  app.controller('roomCtrl', function($scope, $routeParams, $location) {
     
  	$scope.urlArray = $location.absUrl().split('/');
  	$scope.intRoom = $scope.urlArray.length - 1;
- 	$scope.selectedRoom = $scope.urlArray[$scope.intRoom];
+ 	$scope.selectedKey = $scope.urlArray[$scope.intRoom];
+ 	$scope.selectedRoom = "";
+
+ 	angular.forEach($scope.rooms, function (value, key) {
+		if(value.key == selectedKey){
+			$scope.selectedRoom = value.name;
+		};
+	});
 
     console.log($routeParams);
     console.log($location.absUrl().split('/')[4]);
