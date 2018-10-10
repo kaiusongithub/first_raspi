@@ -40,8 +40,18 @@ button {
 	border-radius: 3px;
 }
 
+/*Material Design Changes*/
+
 .md-button.md-default-theme.md-primary:not([disabled]) md-icon, .md-button.md-primary:not([disabled]) md-icon {
 	color: #b00000;
+}
+
+md-switch.md-default-theme.md-checked .md-bar, md-switch.md-checked .md-bar {
+	background-color: #cf6666;
+}
+
+md-switch.md-default-theme.md-checked .md-thumb, md-switch.md-checked .md-thumb {
+	background-color: #b00000;
 }
 
 /*header*/
