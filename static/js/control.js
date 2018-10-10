@@ -5,11 +5,9 @@ var app = angular.module('myApp', ['ngMaterial', 'ngRoute']);
 app.config(function($routeProvider) {
   $routeProvider
   .when('/rooms/', {
-    templateUrl : "templates/control.html",
     controller: 'myCtrl'
   })
   .when('/rooms/:selectedroom/', {
-    templateUrl : "room.html",
     controller: 'roomCtrl'
   })
   .otherwise({
