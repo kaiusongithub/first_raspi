@@ -27,6 +27,7 @@
 		<md-icon md-svg-icon="../static/css/alarm.svg"></md-icon>
 		<p>{{x.name}}</p>
 		<md-switch class="md-secondary" ng-model="x.enabled"></md-switch>
+		<md-divider md-inset ng-if="!$last"></md-divider>
 	</md-list-item>
 </md-list>
 

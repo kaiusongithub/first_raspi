@@ -16,10 +16,28 @@
 
 <div id="header">
 	<md-button class="md-icon-button md-primary" aria-label="Settings">
-		<md-icon md-svg-icon="/static/css/menu.svg"></md-icon>
+		<md-icon md-svg-icon="/static/css/menu.svg" ng-click="toggleLeft()"></md-icon>
 	</md-button>
 	<p id="header_headline">Kai's Smart Home</p>
 </div>
+
+<!-- SIDE NAVIGATION -->
+<md-sidenav class="md-sidenav-left" md-component-id="left" md-disable-backdrop md-whiteframe="4">
+
+	<md-toolbar class="md-theme-indigo">
+		<h1 class="md-toolbar-tools">Disabled Backdrop</h1>
+	</md-toolbar>
+
+	<md-content layout-margin>
+		<p>
+			This sidenav is not showing any backdrop, where users can click on it, to close the sidenav.
+		</p>
+		<md-button ng-click="toggleLeft()" class="md-accent">
+			Close this Sidenav
+		</md-button>
+	</md-content>
+
+</md-sidenav>
 
 <!-- ROOMS -->
 <a data-ng-repeat="x in rooms" href="/rooms/{{x.key}}" target="_self">
