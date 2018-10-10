@@ -10,7 +10,8 @@
 	<!-- STYLESHEET -->
   	<link rel="stylesheet" href="../static/css/style.css">
 </head>
-<body data-ng-app="myApp" data-ng-controller="roomCtrl" ng-cloak>
+<body data-ng-app="myApp" ng-cloak>
+<div data-ng-controller="roomCtrl">
 
 <div id="header">
 	<a href="/rooms" target="_self">
@@ -30,6 +31,7 @@
 		<md-divider md-inset ng-if="!$last"></md-divider>
 	</md-list-item>
 </md-list>
+</div>
 
 <!-- AngularsJS and Angular Material ressources at the end of the file for improved loading -->
 <!-- Angular Material requires Angular.js Libraries -->
