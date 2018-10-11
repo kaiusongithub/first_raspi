@@ -147,7 +147,7 @@ md-select-menu.md-default-theme md-content md-option[selected], md-select-menu m
 	vertical-align: middle;
 }
 
-.md-list-item-text h3 {
+.md-list-item-text p {
 	margin: 0;
 	font-size: 14px;
 	height: 22px;
