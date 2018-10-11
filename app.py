@@ -15,12 +15,12 @@ def control():
 #JSON
 @app.route('/getRooms', methods=['GET'])
 def returnRooms():
-	cur.execute("SELECT roomKey,roomName FROM smarthome.rooms")
+	cur.execute("SELECT roomKey,roomName, divID FROM smarthome.rooms")
 	results = cur.fetchall()
 	rooms = []
 	content = {}
 	for result in results:
-		content = {'key': result[0], 'name': result[1]}
+		content = {'key': result[0], 'name': result[1], 'divid': result[2]}
 		rooms.append(content)
 		content = {}
 	return jsonify(rooms)

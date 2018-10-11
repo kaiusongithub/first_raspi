@@ -3,12 +3,13 @@ var app = angular.module('myApp', ['ngMaterial', 'ngRoute']);
 
 // define global variables
 app.run(function($rootScope) {
-	$rootScope.rooms = [
-		{"key": "livingroom", "name": "Wohnzimmer", "divid": "icon_living_room"},
-		{"key": "kitchen", "name": "Küche", "divid": "icon_kitchen"},
-		{"key": "bedroom", "name": "Schlafzimmer", "divid": "icon_bed_room"},
-		{"key": "office", "name": "Büro", "divid": "icon_office"}
-	];
+	// $rootScope.rooms = [
+	// 	{"key": "livingroom", "name": "Wohnzimmer", "divid": "icon_living_room"},
+	// 	{"key": "kitchen", "name": "Küche", "divid": "icon_kitchen"},
+	// 	{"key": "bedroom", "name": "Schlafzimmer", "divid": "icon_bed_room"},
+	// 	{"key": "office", "name": "Büro", "divid": "icon_office"}
+	// ];
+	$rootScope.rooms = [];
 });
 
 // get the URL parameters based on the route
@@ -38,7 +39,7 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
 
     // get rooms
     $http.get('http://192.168.178.29:5000/getRooms').then(function(response) {
-
+    	$scope.rooms = response.data;
     });
 
     // update weather based on selected country
@@ -105,6 +106,11 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
  app.controller('roomCtrl', function($scope, $routeParams, $location) {
  	$scope.selectedRoom = "";
  	$scope.roomKey = "";
+
+    // get rooms
+    $http.get('http://192.168.178.29:5000/getRooms').then(function(response) {
+    	$scope.rooms = response.data;
+    });
 
  	$scope.devices = [
  		{"key": "livingroomTV", "name": "Fernseher", "room": "livingroom", "enabled": true},
