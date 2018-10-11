@@ -53,6 +53,7 @@ def returnDevices():
 @app.route('/addDevice', methods=['POST'])
 def addDevice():
 	# ...
+	return 'success'
 
 
 if __name__ == '__main__':
