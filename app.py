@@ -10,6 +10,11 @@ app = Flask(__name__)
 
 @app.route('/rooms')
 def control():
+	return render_template('control.html')
+
+#JSON
+@app.route('/getRooms', methods=['GET'])
+def returnRooms():
 	cur.execute("SELECT roomKey,roomName FROM smarthome.rooms")
 	results = cur.fetchall()
 	rooms = []
@@ -18,12 +23,7 @@ def control():
 		content = {'key': result[0], 'name': result[1]}
 		rooms.append(content)
 		content = {}
-	# return render_template('control.html', rooms=jsonify(rooms))
 	return jsonify(rooms)
-
-@app.route('/getRooms', methods=['GET'])
-def getRoomList():
-	return [{"room": "kitchen"}, {"room": "bedroom"}]
 
 @app.route('/rooms/<selectedroom>')
 def room(selectedroom):
