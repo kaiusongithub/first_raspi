@@ -144,7 +144,6 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
 			.title('Soll ' + $scope.deleteItem + ' wirklich entfernt werden?')
 			.textContent('Ein entferntes Element kann nicht wiederhergestellt werden.')
 			.ariaLabel('Element entfernen')
-			.targetEvent(ev)
 			.ok('Entfernen')
 			.cancel('Abbrechen');
 
