@@ -8,11 +8,22 @@ from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
+
+# Serving templates
 @app.route('/rooms')
 def control():
 	return render_template('control.html')
 
-#JSON
+@app.route('/rooms/<selectedroom>')
+def room(selectedroom):
+	return render_template('room.html', selectedroom=room)
+
+@app.route('/admin')
+def admin():
+	return render_template('admin.html')
+
+# DB Services
+# Returns all the rooms
 @app.route('/getRooms', methods=['GET'])
 def returnRooms():
 	cur.execute("SELECT roomID, roomKey,roomName, divID FROM smarthome.rooms")
@@ -25,6 +36,7 @@ def returnRooms():
 		content = {}
 	return jsonify(rooms)
 
+# Returns all the devices
 @app.route('/getDevices', methods=['GET'])
 def returnDevices():
 	cur.execute("SELECT deviceID, deviceKey, deviceName, roomID, enabled FROM smarthome.devices")
@@ -37,9 +49,10 @@ def returnDevices():
 		content = {}
 	return jsonify(devices)
 
-@app.route('/rooms/<selectedroom>')
-def room(selectedroom):
-	return render_template('room.html', selectedroom=room)
+# Adds a new Device to the DB
+@app.route('/addDevice', methods=['GET'])
+def returnDevices():
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')

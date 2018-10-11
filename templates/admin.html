@@ -1,0 +1,69 @@
+{% raw %}
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<base href="/">
+	<!-- RESPONSIVENESS -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Angular Material style sheet -->
+  	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
+	<!-- STYLESHEET -->
+  	<link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body data-ng-app="myApp" ng-cloak>
+<div data-ng-controller="adminCtrl" class="body_wrapper">
+
+<div id="header">
+	<a href="/rooms" target="_self">
+		<md-button class="md-icon-button md-primary" aria-label="Settings">
+			<md-icon md-svg-icon="../static/css/back.svg"></md-icon>
+		</md-button>
+	</a>
+	<p id="header_headline">Admin</p>
+</div>
+
+<div class="content_wrapper">
+	<h1>Ger&auml;t hinzuf&uuml;gen</h1>
+	<!-- INPUT FORM FOR ADDING A NEW DEVICE -->
+	<form name="addDeviceForm">
+		<md-input-container class="md-block">
+			<label>Bezeichnung</label>
+			<input ng-model="deviceName">
+		</md-input-container>
+		<md-input-container class="md-block">
+			<label>Label</label>
+			<input ng-model="deviceKey">
+		</md-input-container>
+		<md-input-container class="md-block">
+			<label>Raum-ID</label>
+			<input ng-model="roomID">
+		</md-input-container>
+		<md-input-container class="md-block">
+			<label>Default</label>
+			<input ng-model="enabled">
+		</md-input-container>
+	</form>
+	<div class="button_wrapper">
+		<md-button class="md-raised">Speichern</md-button>
+	</div>
+</div>
+
+</div>
+
+<!-- AngularsJS and Angular Material ressources at the end of the file for improved loading -->
+<!-- Angular Material requires Angular.js Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
+
+<!-- JAVASCRIPT FILE -->
+<script type="text/javascript" src="../static/js/control.js"></script>
+
+<!-- Angular Material Library -->
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
+
+</body>
+</html>
+{% endraw %}
