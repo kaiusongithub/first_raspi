@@ -124,7 +124,7 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
  });
 
  // admin controller
- app.controller('adminCtrl', function($scope, $routeParams, $location, $http) {
+ app.controller('adminCtrl', function($scope, $routeParams, $location, $http, $mdToast) {
  	$scope.deviceName = "";
  	$scope.deviceKey = "";
  	$scope.roomID = 0;
@@ -145,6 +145,14 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
 					$scope.roomID = 0;
 					$scope.enabled = false;
 					$scope.deviceInformation = {};
+
+					// show success toast
+					$mdToast.show(
+						$mdToast.simple()
+							.textContent('device added!')
+							.position('top right')
+							.hideDelay(3000)
+					);
  				},
  				function(response){
  					// failure callback
