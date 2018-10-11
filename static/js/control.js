@@ -127,10 +127,10 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
  app.controller('adminCtrl', function($scope, $routeParams, $location, $http, $mdToast) {
  	$scope.form = {
  		// create an object to ensure, that values are up to date
- 		deviceName = "",
- 		deviceKey = "",
- 		roomID = 0,
- 		enabled = false
+ 		deviceName: "",
+ 		deviceKey: "",
+ 		roomID: 0,
+ 		enabled: false
  	};
  	$scope.deviceInformation = {};
  	$scope.currentNavItem = 'devices';
