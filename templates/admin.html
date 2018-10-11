@@ -44,40 +44,10 @@
 		<!-- LIST OF ALL DEVICES IN THE ROOM -->
 		<md-list class="md-dense">
 
-			<md-list-item>
+			<md-list-item data-ng-repeat="x in devices">
 				<div class="md-list-item-text">
-            		<h3>Test</h3>
-            		<p>Wohnzimmer</p>
-          		</div>
-          		<md-icon md-svg-icon="../static/css/close.svg"  ng-click="" aria-label="Send Email" class="md-secondary md-hue-3 delete-list-item" ></md-icon>
-          		<md-icon md-svg-icon="../static/css/edit.svg"  ng-click="" aria-label="Send Email" class="md-secondary md-hue-3" ></md-icon>
-				<md-divider md-inset ng-if="!$last"></md-divider>
-			</md-list-item>
-
-			<md-list-item>
-				<div class="md-list-item-text">
-            		<h3>Test</h3>
-            		<p>Wohnzimmer</p>
-          		</div>
-          		<md-icon md-svg-icon="../static/css/close.svg"  ng-click="" aria-label="Send Email" class="md-secondary md-hue-3 delete-list-item" ></md-icon>
-          		<md-icon md-svg-icon="../static/css/edit.svg"  ng-click="" aria-label="Send Email" class="md-secondary md-hue-3" ></md-icon>
-				<md-divider md-inset ng-if="!$last"></md-divider>
-			</md-list-item>
-
-			<md-list-item>
-				<div class="md-list-item-text">
-            		<h3>Test</h3>
-            		<p>Wohnzimmer</p>
-          		</div>
-          		<md-icon md-svg-icon="../static/css/close.svg"  ng-click="" aria-label="Send Email" class="md-secondary md-hue-3 delete-list-item" ></md-icon>
-          		<md-icon md-svg-icon="../static/css/edit.svg"  ng-click="" aria-label="Send Email" class="md-secondary md-hue-3" ></md-icon>
-				<md-divider md-inset ng-if="!$last"></md-divider>
-			</md-list-item>
-
-			<md-list-item>
-				<div class="md-list-item-text">
-            		<h3>Test</h3>
-            		<p>Wohnzimmer</p>
+            		<h3>{{x.name}}</h3>
+            		<p>{{x.roomID}}</p>
           		</div>
           		<md-icon md-svg-icon="../static/css/close.svg"  ng-click="" aria-label="Send Email" class="md-secondary md-hue-3 delete-list-item" ></md-icon>
           		<md-icon md-svg-icon="../static/css/edit.svg"  ng-click="" aria-label="Send Email" class="md-secondary md-hue-3" ></md-icon>

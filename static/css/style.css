@@ -311,7 +311,7 @@ a:active {
 }
 
 .delete-list-item {
-	color: #b00000;
+	color: #b00000 !important;
 }
 
 /*SMARTPHONES*/

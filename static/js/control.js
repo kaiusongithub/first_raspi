@@ -125,6 +125,11 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
 
  // admin controller
  app.controller('adminCtrl', function($scope, $routeParams, $location, $http, $mdToast) {
+ 	// get devices
+    $http.get('http://192.168.178.29:5000/getDevices').then(function(response) {
+    	$scope.devices = response.data;
+    });
+
  	$scope.form = {
  		// create an object to ensure, that values are up to date
  		deviceName: "",
