@@ -125,6 +125,11 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
 
  // admin controller
  app.controller('adminCtrl', function($scope, $routeParams, $location, $http, $mdToast) {
+ 	// get rooms
+    $http.get('http://192.168.178.29:5000/getRooms').then(function(response) {
+    	$scope.rooms = response.data;
+    });
+
  	// get devices
     $http.get('http://192.168.178.29:5000/getDevices').then(function(response) {
     	$scope.devices = response.data;

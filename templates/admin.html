@@ -99,6 +99,22 @@
 		<div class="button_wrapper">
 			<h1>&Uuml;bersicht</h1>
 		</div>
+
+		<!-- LIST OF ALL DEVICES IN THE ROOM -->
+		<md-list class="md-dense">
+
+			<md-list-item data-ng-repeat="x in rooms">
+				<div class="md-list-item-text">
+            		<h3>{{x.name}}</h3>
+            		<p>{{x.key}}</p>
+          		</div>
+          		<md-icon md-svg-icon="../static/css/close.svg"  ng-click="" aria-label="Send Email" class="md-secondary md-hue-3 delete-list-item" ></md-icon>
+          		<md-icon md-svg-icon="../static/css/edit.svg"  ng-click="" aria-label="Send Email" class="md-secondary md-hue-3" ></md-icon>
+				<md-divider md-inset ng-if="!$last"></md-divider>
+			</md-list-item>
+
+		</md-list>
+
 		<div class="button_wrapper">
 			<h1>Raum hinzuf&uuml;gen</h1>
 		</div>
