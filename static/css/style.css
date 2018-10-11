@@ -120,7 +120,11 @@ md-input-container>md-select {
 }
 
 .md-input-focused .md-input {
-	border-color: #b00000;
+	border-color: #b00000 !important;
+}
+
+.md-input-focused label {
+	color: #b00000 !important;
 }
 
 /*header*/
