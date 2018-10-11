@@ -131,8 +131,17 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
  	$scope.enabled = false;
  	$scope.deviceInformation = {};
  	$scope.currentNavItem = 'devices';
+ 	$scope.showDevices = true;
 
- 	$scope.goto = function(page) {};
+ 	$scope.goto = function(page) {
+ 		if(page=="devices"){
+ 			// ...
+ 			$scope.showDevices = true;
+ 		} else {
+ 			// ...
+ 			$scope.showDevices = false;
+ 		};
+ 	};
 
  	$scope.addDevice = function() {
  		// ...
