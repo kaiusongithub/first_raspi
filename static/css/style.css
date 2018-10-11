@@ -55,6 +55,14 @@ button {
 	width: 100%;
 }
 
+h1 {
+	color: #232323;
+	font-size: 24px;
+	font-weight: 300;
+	box-sizing: border-box;
+	width: 100%;
+}
+
 /*Material Design Changes*/
 
 md-list {
