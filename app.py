@@ -4,18 +4,21 @@ db = MySQLdb.connect("localhost", "admin", "admin", "smarthome")
 cur=db.cursor()
 
 
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
 @app.route('/rooms')
 def control():
 	cur.execute("SELECT roomKey,roomName FROM smarthome.rooms")
-	for row in cur.fetchall() :
-		roomKey = str(row[0])
-		roomName = str(row[1])
-	print cur.fetchall()
-	return render_template('control.html')
+	results = cur.fetchall()
+	rooms = []
+	content = {}
+	for result in results:
+		content = {'key': result[0], 'name': result[1]}
+		rooms.append(content)
+		content = {}
+	return render_template('control.html', rooms=jsonify(rooms))
 
 @app.route('/getRooms', methods=['GET'])
 def getRoomList():
