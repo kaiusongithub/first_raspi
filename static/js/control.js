@@ -139,6 +139,8 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
     // delete item
 	$scope.showConfirm = function(ev) {
 		// Appending dialog to document.body to cover sidenav in docs app
+		var parentEl = angular.element(document.body);
+		console.log(parentEl);
 		var confirm = $mdDialog.confirm()
 			.title('Soll das Element wirklich entfernt werden?')
 			.textContent('Ein entferntes Element kann nicht wiederhergestellt werden.')
