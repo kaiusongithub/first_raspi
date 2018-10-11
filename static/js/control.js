@@ -137,7 +137,7 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
 
     $scope.deleteItem = "";
     // delete item
-	$scope.showConfirm = function(ev, name) {
+	$scope.showConfirm = function(name) {
 		// Appending dialog to document.body to cover sidenav in docs app
 		$scope.deleteItem = name;
 		var confirm = $mdDialog.confirm()
