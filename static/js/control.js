@@ -135,11 +135,13 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
     	$scope.devices = response.data;
     });
 
+    $scope.deleteItem = "";
     // delete item
 	$scope.showConfirm = function(ev, name) {
 		// Appending dialog to document.body to cover sidenav in docs app
+		$scope.deleteItem = name;
 		var confirm = $mdDialog.confirm()
-			.title('Soll ' + name + ' wirklich entfernt werden?')
+			.title('Soll ' + $scope.deleteItem + ' wirklich entfernt werden?')
 			.textContent('Ein entferntes Element kann nicht wiederhergestellt werden.')
 			.ariaLabel('Element entfernen')
 			.targetEvent(ev)
