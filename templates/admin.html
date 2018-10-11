@@ -23,6 +23,16 @@
 </div>
 
 <div class="content_wrapper">
+	<!-- NAVIGATION -->
+	<md-nav-bar md-no-ink-bar="disableInkBar" md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+		<!-- DEVICES -->
+		<md-nav-item md-nav-click="goto('devices')" name="devices">Ger&auml;te</md-nav-item>
+		<!-- ROOMS -->
+		<md-nav-item md-nav-click="goto('rooms')" name="devices">R&auml;ume</md-nav-item>
+		<!-- CITIES -->
+		<md-nav-item md-nav-click="goto('cities')" name="cities">St&auml;dte</md-nav-item>
+	</md-nav-bar>
+
 	<h1>Ger&auml;t hinzuf&uuml;gen</h1>
 	<!-- INPUT FORM FOR ADDING A NEW DEVICE -->
 	<form name="addDeviceForm">

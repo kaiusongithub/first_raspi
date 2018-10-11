@@ -131,6 +131,8 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
  	$scope.enabled = false;
  	$scope.deviceInformation = {};
 
+ 	$scope.goto = function(page) {};
+
  	$scope.addDevice = function() {
  		// ...
  		$scope.deviceInformation = JSON.stringify({"deviceName": $scope.deviceName, "deviceKey": $scope.deviceKey, "roomID": $scope.roomID, "enabled": $scope.enabled});
