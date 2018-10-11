@@ -143,13 +143,13 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
 			.textContent('Ein entferntes Element kann nicht wiederhergestellt werden.')
 			.ariaLabel('Element entfernen')
 			.targetEvent(ev)
-			.ok('Entfernen!')
+			.ok('Entfernen')
 			.cancel('Abbrechen');
 
 		$mdDialog.show(confirm).then(function() {
-			$scope.status = 'Entfernt.';
+			console.log('Element entfernt');
 		}, function() {
-			$scope.status = 'Abgebrochen.';
+			console.log('Abgebrochen');
 		});
 	};
 

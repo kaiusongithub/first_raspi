@@ -158,6 +158,10 @@ md-select-menu.md-default-theme md-content md-option[selected], md-select-menu m
 	color: #757575;
 }
 
+.md-button.md-default-theme.md-primary, .md-button.md-primary {
+	color: #b00000;
+}
+
 /*header*/
 #header {
 	position: fixed;
