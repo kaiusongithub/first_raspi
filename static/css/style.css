@@ -131,6 +131,10 @@ md-select:focus .md-select-value {
 	border-bottom-color: #b00000 !important;
 }
 
+md-select-menu.md-default-theme md-content md-option[selected], md-select-menu md-content md-option[selected] {
+	color: #b00000;
+}
+
 /*header*/
 #header {
 	position: fixed;
