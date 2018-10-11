@@ -139,6 +139,12 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
  			.then(
  				function(response){
  					// success callback
+ 					// clear values
+					$scope.deviceName = "";
+					$scope.deviceKey = "";
+					$scope.roomID = 0;
+					$scope.enabled = false;
+					$scope.deviceInformation = {};
  				},
  				function(response){
  					// failure callback
