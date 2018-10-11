@@ -128,7 +128,7 @@ md-input-container>md-select {
 }
 
 .md-select:focus .md-select-value {
-	border-color: #b00000;
+	border-color: #b00000 !important;
 }
 
 /*header*/
