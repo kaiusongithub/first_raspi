@@ -103,7 +103,7 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
 		// "cod":200};
 });
 
- app.controller('roomCtrl', function($scope, $routeParams, $location) {
+ app.controller('roomCtrl', function($scope, $routeParams, $location, $http) {
  	$scope.selectedRoom = "";
  	$scope.roomKey = "";
 
