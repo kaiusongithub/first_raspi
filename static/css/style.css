@@ -81,8 +81,13 @@ md-switch.md-default-theme.md-checked .md-thumb, md-switch.md-checked .md-thumb 
 	background-color: #b00000;
 }
 
-md-nav-bar {
+.md-nav-bar {
 	width: 100%;
+	border-color: transparent;
+}
+
+md-nav-bar.md-default-theme md-nav-ink-bar, md-nav-bar md-nav-ink-bar {
+	background-color: #b00000;
 }
 
 /*header*/
