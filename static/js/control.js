@@ -132,14 +132,25 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
  	$scope.deviceInformation = {};
  	$scope.currentNavItem = 'devices';
  	$scope.showDevices = true;
+ 	$scope.showRooms = false;
+ 	$scope.showCities = false;
 
  	$scope.goto = function(page) {
  		if(page=="devices"){
- 			// ...
+ 			// show devices
  			$scope.showDevices = true;
- 		} else {
- 			// ...
+			$scope.showRooms = false;
+			$scope.showCities = false;
+ 		} else if(page=="rooms") {
+ 			// show rooms
  			$scope.showDevices = false;
+			$scope.showRooms = true;
+			$scope.showCities = false;
+ 		} else {
+ 			// show cities
+ 			$scope.showDevices = false;
+			$scope.showRooms = false;
+			$scope.showCities = true;
  		};
  	};
 
