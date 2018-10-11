@@ -191,6 +191,10 @@ a:active {
 	background-image: url("office.png");
 }
 
+#icon_bath {
+	background-image: url("bath.png");
+}
+
 .select_room_devider_wrapper {
 	width: 100%;
 	height: 28px;
