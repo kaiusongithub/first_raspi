@@ -124,4 +124,18 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
  });
 
  // admin controller
- app.controller('adminCtrl', function($scope, $routeParams, $location, $http) {});
+ app.controller('adminCtrl', function($scope, $routeParams, $location, $http) {
+ 	$scope.deviceName = "";
+ 	$scope.deviceKey = "";
+ 	$scope.roomID = 0;
+ 	$scope.enabled = false;
+ 	$scope.deviceInformation = {};
+
+ 	$scope.addDevice = function() {
+ 		// ...
+ 		$scope.deviceInformation = {"deviceName": $scope.deviceName, "deviceKey": $scope.deviceKey, "roomID": $scope.roomID, "enabled": $scope.enabled};
+ 		console.log($scope.deviceInformation);
+ 	};
+ });
+
+
