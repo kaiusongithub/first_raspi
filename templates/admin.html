@@ -35,8 +35,14 @@
 			<input ng-model="deviceKey">
 		</md-input-container>
 		<md-input-container class="md-block">
-			<label>Raum-ID</label>
-			<input ng-model="roomID">
+			<label>Raum</label>
+			<md-select ng-model="roomID">
+				<md-option ng-value="1">Wohnzimmer</md-option>
+				<md-option ng-value="2">K&uuml;che</md-option>
+				<md-option ng-value="3">Schlafzimmer</md-option>
+				<md-option ng-value="4">B&uuml;ro</md-option>
+				<md-option ng-value="5">Badezimmer</md-option>
+			</md-select>
 		</md-input-container>
 		<md-input-container class="md-block">
 			<label>Default</label>
