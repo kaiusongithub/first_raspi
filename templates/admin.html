@@ -48,15 +48,15 @@
 			<form name="addDeviceForm">
 				<md-input-container class="md-block">
 					<label>Bezeichnung</label>
-					<input ng-model="deviceName">
+					<input ng-model="form.deviceName">
 				</md-input-container>
 				<md-input-container class="md-block">
 					<label>Label</label>
-					<input ng-model="deviceKey">
+					<input ng-model="form.deviceKey">
 				</md-input-container>
 				<md-input-container class="md-block">
 					<label>Raum</label>
-					<md-select ng-model="roomID">
+					<md-select ng-model="form.roomID">
 						<md-option ng-value="1">Wohnzimmer</md-option>
 						<md-option ng-value="2">K&uuml;che</md-option>
 						<md-option ng-value="3">Schlafzimmer</md-option>
@@ -66,7 +66,7 @@
 				</md-input-container>
 				<md-input-container class="md-block">
 					<label>Default</label>
-					<md-select ng-model="enabled">
+					<md-select ng-model="form.enabled">
 						<md-option ng-value="true">An</md-option>
 						<md-option ng-value="false">Aus</md-option>
 					</md-select>

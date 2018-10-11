@@ -125,10 +125,13 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
 
  // admin controller
  app.controller('adminCtrl', function($scope, $routeParams, $location, $http, $mdToast) {
- 	$scope.deviceName = "";
- 	$scope.deviceKey = "";
- 	$scope.roomID = 0;
- 	$scope.enabled = false;
+ 	$scope.form = {
+ 		// create an object to ensure, that values are up to date
+ 		deviceName = "",
+ 		deviceKey = "",
+ 		roomID = 0,
+ 		enabled = false
+ 	};
  	$scope.deviceInformation = {};
  	$scope.currentNavItem = 'devices';
  	$scope.showDevices = true;
@@ -156,17 +159,17 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
 
  	$scope.addDevice = function() {
  		// ...
- 		$scope.deviceInformation = JSON.stringify({"deviceName": $scope.deviceName, "deviceKey": $scope.deviceKey, "roomID": $scope.roomID, "enabled": $scope.enabled});
+ 		$scope.deviceInformation = JSON.stringify({"deviceName": $scope.form.deviceName, "deviceKey": $scope.form.deviceKey, "roomID": $scope.form.roomID, "enabled": $scope.form.enabled});
  		console.log($scope.deviceInformation);
  		$http.post('http://192.168.178.29:5000/addDevice', $scope.deviceInformation)
  			.then(
  				function(response){
  					// success callback
  					// clear values
-					$scope.deviceName = "";
-					$scope.deviceKey = "";
-					$scope.roomID = 0;
-					$scope.enabled = false;
+					$scope.form.deviceName = "";
+					$scope.form.deviceKey = "";
+					$scope.form.roomID = 0;
+					$scope.form.enabled = false;
 					$scope.deviceInformation = {};
 
 					// show success toast
