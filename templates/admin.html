@@ -39,33 +39,35 @@
 		<h1>Ger&auml;t hinzuf&uuml;gen</h1>
 	</div>
 	<!-- INPUT FORM FOR ADDING A NEW DEVICE -->
-	<form name="addDeviceForm">
-		<md-input-container class="md-block">
-			<label>Bezeichnung</label>
-			<input ng-model="deviceName">
-		</md-input-container>
-		<md-input-container class="md-block">
-			<label>Label</label>
-			<input ng-model="deviceKey">
-		</md-input-container>
-		<md-input-container class="md-block">
-			<label>Raum</label>
-			<md-select ng-model="roomID">
-				<md-option ng-value="1">Wohnzimmer</md-option>
-				<md-option ng-value="2">K&uuml;che</md-option>
-				<md-option ng-value="3">Schlafzimmer</md-option>
-				<md-option ng-value="4">B&uuml;ro</md-option>
-				<md-option ng-value="5">Badezimmer</md-option>
-			</md-select>
-		</md-input-container>
-		<md-input-container class="md-block">
-			<label>Default</label>
-			<md-select ng-model="enabled">
-				<md-option ng-value="true">An</md-option>
-				<md-option ng-value="false">Aus</md-option>
-			</md-select>
-		</md-input-container>
-	</form>
+	<div class="button_wrapper">
+		<form name="addDeviceForm">
+			<md-input-container class="md-block">
+				<label>Bezeichnung</label>
+				<input ng-model="deviceName">
+			</md-input-container>
+			<md-input-container class="md-block">
+				<label>Label</label>
+				<input ng-model="deviceKey">
+			</md-input-container>
+			<md-input-container class="md-block">
+				<label>Raum</label>
+				<md-select ng-model="roomID">
+					<md-option ng-value="1">Wohnzimmer</md-option>
+					<md-option ng-value="2">K&uuml;che</md-option>
+					<md-option ng-value="3">Schlafzimmer</md-option>
+					<md-option ng-value="4">B&uuml;ro</md-option>
+					<md-option ng-value="5">Badezimmer</md-option>
+				</md-select>
+			</md-input-container>
+			<md-input-container class="md-block">
+				<label>Default</label>
+				<md-select ng-model="enabled">
+					<md-option ng-value="true">An</md-option>
+					<md-option ng-value="false">Aus</md-option>
+				</md-select>
+			</md-input-container>
+		</form>
+	</div>
 	<div class="button_wrapper">
 		<md-button class="md-raised" ng-click="addDevice()">Speichern</md-button>
 	</div>
