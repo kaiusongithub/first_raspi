@@ -27,7 +27,7 @@ def returnRooms():
 
 @app.route('/getDevices', methods=['GET'])
 def returnDevices():
-	cur.execute("SELECT deviceID, deviceKey, deviceName, roomID, enabled FROM smarthome.rooms")
+	cur.execute("SELECT deviceID, deviceKey, deviceName, roomID, enabled FROM smarthome.devices")
 	results = cur.fetchall()
 	devices = []
 	content = {}
