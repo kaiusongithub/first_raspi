@@ -46,7 +46,10 @@
 		</md-input-container>
 		<md-input-container class="md-block">
 			<label>Default</label>
-			<input ng-model="enabled">
+			<md-select ng-model="enabled">
+				<md-option ng-value="true">An</md-option>
+				<md-option ng-value="false">Aus</md-option>
+			</md-select>
 		</md-input-container>
 	</form>
 	<div class="button_wrapper">
