@@ -57,10 +57,14 @@ button {
 
 h1 {
 	color: #232323;
-	font-size: 24px;
+	font-size: 18px;
 	font-weight: 300;
 	box-sizing: border-box;
 	width: 100%;
+	margin-top: 12px;
+	height: 24px;
+	line-height: 24px;
+	vertical-align: middle;
 }
 
 /*Material Design Changes*/
@@ -96,6 +100,23 @@ md-switch.md-default-theme.md-checked .md-thumb, md-switch.md-checked .md-thumb 
 
 md-nav-bar.md-default-theme md-nav-ink-bar, md-nav-bar md-nav-ink-bar {
 	background-color: #b00000;
+}
+
+.md-nav-item:first-of-type {
+	margin-left: 0;
+}
+
+md-nav-bar.md-default-theme .md-nav-bar, md-nav-bar .md-nav-bar {
+	border-color: transparent;
+}
+
+md-input-container {
+	margin: 0;
+	margin-top: 12px;
+}
+
+md-input-container>md-select {
+	margin-bottom: 24px;
 }
 
 /*header*/
