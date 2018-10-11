@@ -49,10 +49,6 @@ def returnDevices():
 		content = {}
 	return jsonify(devices)
 
-# Adds a new Device to the DB
-@app.route('/addDevice', methods=['GET'])
-def returnDevices():
-
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
