@@ -136,11 +136,14 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
  		$scope.deviceInformation = JSON.stringify({"deviceName": $scope.deviceName, "deviceKey": $scope.deviceKey, "roomID": $scope.roomID, "enabled": $scope.enabled});
  		console.log($scope.deviceInformation);
  		$http.post('http://192.168.178.29:5000/addDevice', $scope.deviceInformation)
- 		.success(function(){
- 			// ...
- 		}).error(function(){
- 			// ...
- 		});
+ 			.then(
+ 				function(response){
+ 					// success callback
+ 				},
+ 				function(response){
+ 					// failure callback
+ 				}
+ 			);
  	};
  });
 
