@@ -130,6 +130,7 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
  	$scope.roomID = 0;
  	$scope.enabled = false;
  	$scope.deviceInformation = {};
+ 	$scope.currentNavItem = 'devices';
 
  	$scope.goto = function(page) {};
 
