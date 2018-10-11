@@ -133,7 +133,7 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
 
  	$scope.addDevice = function() {
  		// ...
- 		$scope.deviceInformation = {"deviceName": $scope.deviceName, "deviceKey": $scope.deviceKey, "roomID": $scope.roomID, "enabled": $scope.enabled};
+ 		$scope.deviceInformation = JSON.stringify({"deviceName": $scope.deviceName, "deviceKey": $scope.deviceKey, "roomID": $scope.roomID, "enabled": $scope.enabled});
  		console.log($scope.deviceInformation);
  	};
  });

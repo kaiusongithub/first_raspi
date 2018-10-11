@@ -49,6 +49,11 @@ def returnDevices():
 		content = {}
 	return jsonify(devices)
 
+# Add a new device
+@app.route('/addDevice', methods=['POST'])
+def addDevice():
+	# ...
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
