@@ -135,6 +135,24 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
     	$scope.devices = response.data;
     });
 
+    // delete item
+	$scope.showConfirm = function(ev) {
+		// Appending dialog to document.body to cover sidenav in docs app
+		var confirm = $mdDialog.confirm()
+			.title('Soll dieses Element wirklich entfernt werden?')
+			.textContent('Ein entferntes Element kann nicht wiederhergestellt werden.')
+			.ariaLabel('Element entfernen')
+			.targetEvent(ev)
+			.ok('Entfernen!')
+			.cancel('Abbrechen');
+
+		$mdDialog.show(confirm).then(function() {
+			$scope.status = 'Entfernt.';
+		}, function() {
+			$scope.status = 'Abgebrochen.';
+		});
+	};
+
  	$scope.form = {
  		// create an object to ensure, that values are up to date
  		deviceName: "",
