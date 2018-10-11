@@ -150,7 +150,7 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
 					$mdToast.show(
 						$mdToast.simple()
 							.textContent('device added!')
-							.position('top right')
+							.position('bottom right')
 							.hideDelay(3000)
 					);
  				},
