@@ -18,7 +18,8 @@ def control():
 		content = {'key': result[0], 'name': result[1]}
 		rooms.append(content)
 		content = {}
-	return render_template('control.html', rooms=jsonify(rooms))
+	# return render_template('control.html', rooms=jsonify(rooms))
+	return jsonify(rooms)
 
 @app.route('/getRooms', methods=['GET'])
 def getRoomList():
