@@ -310,6 +310,10 @@ a:active {
 	width: 100%;
 }
 
+.delete-list-item {
+	color: #b00000;
+}
+
 /*SMARTPHONES*/
 
 @media only screen and (max-width: 750px) {
