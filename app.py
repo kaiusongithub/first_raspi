@@ -4,7 +4,7 @@ db = MySQLdb.connect("localhost", "admin", "admin", "smarthome")
 cur=db.cursor()
 
 
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
 
 app = Flask(__name__)
 
@@ -53,6 +53,12 @@ def returnDevices():
 @app.route('/addDevice', methods=['POST'])
 def addDevice():
 	# ...
+	request_json = request.get_json()
+	deviceName = request_json.get('deviceName')
+	deviceKey = request_json.get('deviceKey')
+	roomID = request_json.get('roomID')
+	enabled = request_json.get('enabled')
+	cur.execute("INSERT INTO smarthome.devices (deviceKey, deviceName, roomID, enabled) VALUES (%s, %s, %s, %s)", (deviceName, deviceKey, roomID, enabled))
 	return 'success'
 
 
