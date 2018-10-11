@@ -138,6 +138,23 @@ md-select-menu.md-default-theme md-content md-option[selected], md-select-menu m
 	color: #b00000;
 }
 
+.md-list-item-text h3 {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 300;
+	height: 19px;
+	line-height: 19px;
+	vertical-align: middle;
+}
+
+.md-list-item-text h3 {
+	margin: 0;
+	font-size: 14px;
+	height: 22px;
+	line-height: 22px;
+	vertical-align: middle;
+}
+
 /*header*/
 #header {
 	position: fixed;
