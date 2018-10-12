@@ -59,7 +59,7 @@ def addDevice():
 	roomID = request_json.get('roomID')
 	enabled = request_json.get('enabled')
 	cur.execute("INSERT INTO smarthome.devices (deviceKey, deviceName, roomID, enabled) VALUES (%s, %s, %s, %s)", (deviceKey, deviceName, roomID, enabled))
-	return cur.lastrowid
+	return "success"
 
 # Add a new city
 @app.route('/addCity', methods=['POST'])
@@ -70,7 +70,7 @@ def addCity():
 	zipCode = request_json.get('zipCode')
 	country = request_json.get('country')
 	cur.execute("INSERT INTO smarthome.cities (cityName, zipCode, country) VALUES (%s, %s, %s)", (cityName, zipCode, country))
-	return cur.lastrowid
+	return "success"
 
 
 if __name__ == '__main__':
