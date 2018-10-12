@@ -220,6 +220,7 @@ a:active {
 	background-color: #f1fbfa;
 	display: inline-block;
 	float: initial;
+	padding: 6px;
 }
 
 /*select room*/
