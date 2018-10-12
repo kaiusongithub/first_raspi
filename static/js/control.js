@@ -37,6 +37,11 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
       };
     };
 
+    // get cities
+    $http.get('http://192.168.178.29:5000/getCities').then(function(response) {
+    	$scope.cities = response.data;
+    });
+
     // get rooms
     $http.get('http://192.168.178.29:5000/getRooms').then(function(response) {
     	$scope.rooms = response.data;
