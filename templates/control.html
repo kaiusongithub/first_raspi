@@ -64,19 +64,21 @@
 		</div>
 	</div>
 	<!-- ROOMS -->
-	<a data-ng-repeat="x in rooms" href="/rooms/{{x.key}}" target="_self">
-		<div class="card select_room_wrapper">
-			<div class="select_room_icon_wrapper">
-				<div class="select_room_icon" id="{{x.divid}}"></div>
+	<div id="room_cards_wrapper">
+		<a data-ng-repeat="x in rooms" href="/rooms/{{x.key}}" target="_self">
+			<div class="card select_room_wrapper">
+				<div class="select_room_icon_wrapper">
+					<div class="select_room_icon" id="{{x.divid}}"></div>
+				</div>
+				<div class="select_room_devider_wrapper">
+					<div class="select_room_devider"></div>
+				</div>
+				<div class="select_room_name_wrapper">
+					<p class="select_room_name">{{x.name}}</p>
+				</div>
 			</div>
-			<div class="select_room_devider_wrapper">
-				<div class="select_room_devider"></div>
-			</div>
-			<div class="select_room_name_wrapper">
-				<p class="select_room_name">{{x.name}}</p>
-			</div>
-		</div>
-	</a>
+		</a>
+	</div>
 	<div class="button_wrapper">
 		<md-button class="md-accent">Raum hinzuf&uuml;gen</md-button>
 	</div>

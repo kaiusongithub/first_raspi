@@ -223,12 +223,20 @@ a:active {
 }
 
 /*select room*/
+.room_cards_wrapper {
+	width: 100%;
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
 .select_room_wrapper {
 	width: 300px;
 	height: auto;
 	margin-right: 12px;
 	margin-bottom: 12px;
 	cursor: pointer;
+	display: inline-block;
+	float: initial;
 }
 
 .select_room_icon_wrapper {
@@ -333,8 +341,8 @@ a:active {
 
 	/*select room*/
 	.select_room_wrapper {
-		width: 100%;
-		margin-right: 0;
+		width: 90%;
+		margin-right: 12px;
 	}
 
 	/*weather*/
