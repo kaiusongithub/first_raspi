@@ -70,7 +70,7 @@ def addCity():
 	zipCode = request_json.get('zipCode')
 	country = request_json.get('country')
 	cur.execute("INSERT INTO smarthome.cities (cityName, zipCode, country) VALUES (%s, %s, %s)", (cityName, zipCode, country))
-	return cursor.lastrowid
+	return cur.lastrowid
 
 
 if __name__ == '__main__':
