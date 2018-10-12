@@ -59,7 +59,7 @@ def addDevice():
 	roomID = request_json.get('roomID')
 	enabled = request_json.get('enabled')
 	cur.execute("INSERT INTO smarthome.devices (deviceKey, deviceName, roomID, enabled) VALUES (%s, %s, %s, %s)", (deviceKey, deviceName, roomID, enabled))
-	return 'success'
+	return cur.lastrowid
 
 # Add a new city
 @app.route('/addCity', methods=['POST'])
