@@ -49,6 +49,19 @@ def returnDevices():
 		content = {}
 	return jsonify(devices)
 
+# Returns all the cities
+@app.route('/getDevices', methods=['GET'])
+def returnCities():
+	cur.execute("SELECT cityID, cityName, zipCode, country FROM smarthome.cities")
+	results = cur.fetchall()
+	returnCities = []
+	content = {}
+	for result in results:
+		content = {'cityID': result[0], 'cityName': result[1], 'zipCode': result[2], 'country': result[3]}
+		cities.append(content)
+		content = {}
+	return jsonify(cities)
+
 # Add a new device
 @app.route('/addDevice', methods=['POST'])
 def addDevice():
