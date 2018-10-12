@@ -211,9 +211,15 @@ a:active {
 
 /*weather*/
 #weather_cards_wrapper {
-	min-width: 100%;
-	border: 1px solid #000000;
+	width: 100%;
 	overflow-x: auto;
+	white-space: nowrap;
+}
+
+.weather_card {
+	background-color: #f1fbfa;
+	display: inline-block;
+	float: initial;
 }
 
 /*select room*/
@@ -223,10 +229,6 @@ a:active {
 	margin-right: 12px;
 	margin-bottom: 12px;
 	cursor: pointer;
-}
-
-.weather_card {
-	background-color: #f1fbfa;
 }
 
 .select_room_icon_wrapper {
