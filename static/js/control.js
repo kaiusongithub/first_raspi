@@ -46,6 +46,26 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
     			$http.get("http://api.openweathermap.org/data/2.5/weather?zip=" + value.zipCode + "," + value.country + "&APPID=4a97ae0f4ff2538a214cf773a5351ff4&units=metric")
     				.then(function(response){
     					$scope.cities[key].currentTemperature = response.data['main']['temp'];
+    					$scope.cities[key].currentCondition = response.data['weather'][0]['description'];
+						// sunny
+						if($scope.cities[key].currentCondition == 'clear sky'){
+							$scope.cities[key].iconId = 'sunny_icon';
+						// cloudy
+						} else if($scope.cities[key].currentCondition == 'few clouds' || $scope.cities[key].currentCondition == 'broken clouds'){
+							$scope.cities[key].iconId = 'cloudy_icon';
+						// cloud
+						} else if($scope.cities[key].currentCondition == 'scattered clouds' || $scope.cities[key].currentCondition == 'mist'){
+							$scope.cities[key].iconId = 'cloud_icon';
+						// rainy
+						} else if($scope.cities[key].currentCondition == 'shower rain' || $scope.cities[key].currentCondition == 'rain' || $scope.cities[key].currentCondition == 'thunderstorm'){
+							$scope.cities[key].iconId = 'rain_icon';
+						// snowy
+						} else if($scope.cities[key].currentCondition == 'snow'){
+							$scope.cities[key].iconId = 'snow_icon';
+						} else {
+							$scope.cities[key].iconId = 'sunny_icon';
+						};
+
     				});
     		});
     		console.log($scope.cities);
