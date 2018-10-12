@@ -209,6 +209,13 @@ a:active {
     color: #232323;
 }
 
+/*weather*/
+#weather_cards_wrapper {
+	min-width: 100%;
+	border: 1px solid #000000;
+	overflow-x: auto;
+}
+
 /*select room*/
 .select_room_wrapper {
 	width: 300px;
