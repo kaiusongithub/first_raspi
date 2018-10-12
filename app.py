@@ -61,6 +61,17 @@ def addDevice():
 	cur.execute("INSERT INTO smarthome.devices (deviceKey, deviceName, roomID, enabled) VALUES (%s, %s, %s, %s)", (deviceKey, deviceName, roomID, enabled))
 	return 'success'
 
+# Add a new city
+@app.route('/addCity', methods=['POST'])
+def addCity():
+	# ...
+	request_json = request.get_json()
+	cityName = request_json.get('cityName')
+	zipCode = request_json.get('zipCode')
+	country = request_json.get('country')
+	cur.execute("INSERT INTO smarthome.cities (cityName, zipCode, country) VALUES (%s, %s, %s)", (cityName, zipCode, country))
+	return 'success'
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
