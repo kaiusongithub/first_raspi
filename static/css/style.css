@@ -220,7 +220,6 @@ a:active {
 	background-color: #f1fbfa;
 	display: inline-block;
 	float: initial;
-	padding: 6px;
 }
 
 /*select room*/
@@ -331,6 +330,11 @@ a:active {
 /*SMARTPHONES*/
 
 @media only screen and (max-width: 750px) {
+	/*weather*/
+	.weather_card {
+		margin-right: 12px !important;
+	}
+
 	/*select room*/
 	.select_room_wrapper {
 		width: 100%;
