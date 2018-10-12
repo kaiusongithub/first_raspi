@@ -37,10 +37,11 @@ app.controller('myCtrl', function($scope, $mdSidenav, $http) {
       };
     };
 
+    $scope.cities = {};
     // get cities
     $http.get('http://192.168.178.29:5000/getCities').
     	then(function(response) {
-    		$scope.cities = response.data;
+    		$scope.cities = JSON.stringify(response.data);
     		// get the current weather for each city
     		angular.forEach($scope.cities, function (value, key) {
     			$http.get("http://api.openweathermap.org/data/2.5/weather?zip=" + value.zipCode + "," + value.country + "&APPID=4a97ae0f4ff2538a214cf773a5351ff4&units=metric")
