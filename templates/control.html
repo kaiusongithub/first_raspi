@@ -50,7 +50,9 @@
 
 <div class="content_wrapper">
 	<!-- WEATHER -->
-	<h1>Wetter</h1>
+	<div class="button_wrapper">
+		<h1>Wetter</h1>
+	</div>
 	<div id="weather_cards_wrapper">
 		<div data-ng-repeat="x in cities" class="card select_room_wrapper weather_card">
 			<div class="select_room_icon_wrapper">
@@ -65,7 +67,9 @@
 		</div>
 	</div>
 	<!-- ROOMS -->
-	<h1>Deine R&auml;me</h1>
+	<div class="button_wrapper">
+		<h1>Deine R&uml;me</h1>
+	</div>
 	<div id="room_cards_wrapper">
 		<!-- <a data-ng-repeat="x in rooms" href="/rooms/{{x.key}}" target="_self"> -->
 			<div ng-repeat="x in rooms" class="card select_room_wrapper">
