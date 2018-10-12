@@ -330,14 +330,16 @@ a:active {
 /*SMARTPHONES*/
 
 @media only screen and (max-width: 750px) {
-	/*weather*/
-	.weather_card {
-		margin-right: 12px !important;
-	}
 
 	/*select room*/
 	.select_room_wrapper {
 		width: 100%;
 		margin-right: 0;
+	}
+
+	/*weather*/
+	.weather_card {
+		margin-right: 12px;
+		width: 90%;
 	}
 }
