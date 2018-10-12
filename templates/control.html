@@ -50,15 +50,15 @@
 
 <div class="content_wrapper">
 	<!-- WEATHER -->
-	<div class="card select_room_wrapper weather_card">
+	<div data-ng-repeat="x in cities" class="card select_room_wrapper weather_card">
 		<div class="select_room_icon_wrapper">
-			<div class="select_room_icon" id="{{iconId}}"></div>
+			<div class="select_room_icon" id="{{x.iconId}}"></div>
 		</div>
 		<div class="select_room_devider_wrapper">
 			<div class="select_room_devider"></div>
 		</div>
 		<div class="select_room_name_wrapper">
-			<p class="select_room_name">{{currentCity}}: {{currentTemperature}} ° C</p>
+			<p class="select_room_name">{{x.cityName}}: {{x.currentTemperature}} ° C</p>
 		</div>
 	</div>
 	<!-- ROOMS -->
