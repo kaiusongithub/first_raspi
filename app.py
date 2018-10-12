@@ -54,7 +54,7 @@ def returnDevices():
 def returnCities():
 	cur.execute("SELECT cityID, cityName, zipCode, country FROM smarthome.cities")
 	results = cur.fetchall()
-	returnCities = []
+	cities = []
 	content = {}
 	for result in results:
 		content = {'cityID': result[0], 'cityName': result[1], 'zipCode': result[2], 'country': result[3]}
